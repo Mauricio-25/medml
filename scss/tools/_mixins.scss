@@ -1,0 +1,77 @@
+
+// ! Coloca la propiedad flex
+
+@mixin flex($gap, $direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// ! Coloca la propiedad grid
+
+@mixin grid($gap, $lengthColumn, $lengthRow, $values...) {
+  $totalArgs: length($values);
+  $index: 0;
+
+  $templateColumn: ();
+  $templateRow: ();
+    
+  display: grid;
+  gap: $gap;
+  
+  // Hacer algo con el resto de los argumentos
+  @if $totalArgs > 0 {
+
+    @each $value in $values {
+
+      @if($index < $lengthColumn) {
+          $templateColumn: append($templateColumn, $value);
+      }
+
+      @else if($index < ($lengthRow + $lengthColumn)) {
+        $templateRow: append($templateRow, $value);
+      }
+
+      $index: $index + 1;
+
+    }
+
+    grid-template-columns: $templateColumn;
+    grid-template-rows: $templateRow;
+
+  }
+}
+
+// ! MEDIA QUERIES
+
+@mixin mobile() {
+  @media (width < $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (width < $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media (width < $laptop) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (width < $desktop) {
+    @content;
+  }
+}
+
+@mixin desktopLg() {
+  @media (width < $desktopLg) {
+    @content;
+  }
+}

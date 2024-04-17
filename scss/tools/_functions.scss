@@ -1,0 +1,22 @@
+
+// ! Eliminar la unidad en una medida
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// ! Calcular el tamaño para que sea responsive
+
+@function size($minWidth, $maxWidth) {
+    $minScreen: $mobile;
+    $maxScreen: $desktopLg;
+    $minScreenNumber: strip-unit($minScreen);
+    $maxScreenNumber: strip-unit($maxScreen);
+
+    $size1: ($maxWidth - $minWidth) / ($maxScreenNumber - $minScreenNumber);
+    $size1Number: strip-unit($size1);
+
+    $size2: calc(#{$size1Number} * (100vw - #{$minScreen}) + #{$minWidth});
+
+    @return clamp($minWidth, $size2, $maxWidth);;
+}

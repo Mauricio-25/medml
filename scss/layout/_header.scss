@@ -1,0 +1,101 @@
+
+.header {
+    
+    &__container {
+        @extend %container;
+        padding: 0.8888888888888888em size($padding-x-mobile, $padding-x); //16
+        @include flex(0, row, space-between, center);
+    }
+
+    &__logo {
+        width: 4.722222222222222em; //85
+    }
+
+    &__div {
+        @include flex(1.1111111111111112em, row, center, center); //20
+    }
+
+    &__ul {
+        @include flex(1.7777777777777777em, row, center, center); //32
+    }
+
+    &__a {
+        font-weight: 700;
+        transition: 0.3s;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    &__button {
+        @extend %button;
+        
+        width: size(120px, 210px); //210
+        background: $primary;
+    }
+
+    &__language {
+        position: relative;
+    }
+
+    &__combobox {
+        background-color: #414141;
+        border-radius: 0.8888888888888888em; //16
+        padding: 0.3333333333333333em 0.4444444444444444em; //6 8
+        @include flex(0.2222222222222222em, row, center, center); //4
+        color: $tertiary;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__collapse {
+        position: absolute;
+        left: 50%;
+        width: 45px;
+        height: 0px;
+        transition: 0.3s;
+        overflow: hidden;
+        transform: translateY(8px) translateX(-50%);
+
+        &--open {
+            height: 72px;
+        }
+    }
+
+    &__li {
+        background-color: #414141;
+
+        &:nth-child(1) {
+            border-radius: 16px 16px 0 0 ;
+        }
+
+        &:nth-child(2) {
+            border-radius: 0 0 16px 16px;
+        }
+    }
+
+    &__box {
+        background-color: #414141;
+        border-radius: 0.8888888888888888em; //16
+        padding: 0.3333333333333333em 0.4444444444444444em; //6 8
+        @include flex(0, row, center, center);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__flags {
+        width: 24px;
+    }
+
+    @include tablet() {
+        &__div {
+            display: none;
+        }
+    }
+}

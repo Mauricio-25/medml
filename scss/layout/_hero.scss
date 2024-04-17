@@ -1,0 +1,56 @@
+.hero {
+    &__container {
+        @extend %container;
+        @include flex(0, row, center, center);
+    }
+
+    // ! COLUMNA 01
+
+    &__col1 {
+        @include flex(32px, column, center, start)
+    }
+
+    &__content {
+        @include flex(24px, column, center, start)
+    }
+
+    &__h1 {
+        font-size: size($h1-mobile, $h1);
+    }
+
+    &__span {
+        font-size: 22px; //22
+        color: $grayLight;
+    }
+
+    &__p {
+        font-size: 22px;
+    }
+
+    &__button {
+        @extend %button;
+        width: 11.666666666666666em; //210
+        background: $primary;
+    }
+
+    &__picture {
+        min-width: 300px;
+    }
+
+    // ! QUERIES
+
+    @include desktop() {
+
+    }
+
+    @include tablet() {
+        &__container {
+            flex-direction: column-reverse;
+        }
+
+        &__picture {
+            max-width: 300px;  //18
+            min-width: unset;
+        }
+    }
+}
