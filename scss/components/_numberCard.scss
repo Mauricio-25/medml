@@ -1,0 +1,35 @@
+
+%numberCard {
+    border: 1px solid $white;
+    padding: 2.2222222222222223em 1.3333333333333333em; //40 24
+    border-radius: 1.3333333333333333em; //24
+    max-width: 18.333333333333332em; //330
+    @include flex(16px, column, center, start);
+
+    & .div {
+        width: 100%;
+        color: $tertiary;
+        font-weight: 700;
+        @include flex(0.8888888888888888em, row, space-between, center); //16
+    }
+
+    & .h3 {
+        font-size: 1.3333333333333333em; //24
+    }
+
+    & .span {
+        font-size: size($heading2-mobile, $heading2);
+    }
+
+    // ! QUERIES
+
+    @include mobile() {
+        text-align: center;
+
+        & .div {
+            flex-direction: column-reverse;
+            justify-content: center;
+        } 
+        
+    }
+}

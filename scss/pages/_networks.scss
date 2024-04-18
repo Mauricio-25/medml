@@ -7,7 +7,7 @@
 
     &__title {
         text-align: center;
-        @include flex(0.8888888888888888em, column, center, start); //16
+        @include flex(0.8888888888888888em, column, center, center); //16
     }
 
     &__h2 {

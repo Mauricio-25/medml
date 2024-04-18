@@ -1,0 +1,34 @@
+
+.why {
+    &__container {
+        @extend %container;
+        @include flex(64px, column, center, center);//64
+    }
+
+    &__h2 {
+        @extend %heading-2;
+    }
+
+    &__ul {
+        @include flex(40px, row, space-between, initial);
+        width: 90%;
+    }
+
+    &__li {
+        @extend %numberCard;
+    }
+
+    &__button {
+        @extend %button;
+        background: $gradient-primary;
+    }
+
+    // ! QUERIES
+
+    @include desktop() {
+        &__ul {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
