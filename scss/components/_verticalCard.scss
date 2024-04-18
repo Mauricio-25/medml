@@ -1,0 +1,44 @@
+
+%verticalCard {
+
+    @include flex(14px, column, start, center); //14
+    text-align: center;
+    height: 19.666666666666668em; //354
+    width: 15.555555555555555em; //280
+    border-radius: 1.3333333333333333em; //24
+    border: 1px solid $white;
+    padding: 1.3333333333333333em 0.8888888888888888em; //24 16
+
+    & .circle {
+        border-radius: 50%;
+        width: 2.7777777777777777em; //50
+        height: 2.7777777777777777em; //50
+        border: 1px solid $primary;
+        @include flex(0, row, center, center);
+    }
+
+    & .icon {
+        width: 1.1111111111111112em; //20
+    }
+
+    & .div {
+        @include flex(0.4444444444444444em, column, center, center); //8
+    }
+
+    & .h3 {
+        font-size: 1.3333333333333333em; //24
+        color: $tertiary;
+        font-weight: 700;
+    }
+
+    & .p {
+        font-size: 0.8888888888888888em; //16
+    }
+
+    // ! QUERIES 
+
+    @include mobile() {
+        width: 100%;
+        max-width: 15.555555555555555em; //280
+    }
+}

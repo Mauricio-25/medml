@@ -1,0 +1,81 @@
+
+.revolutionize {
+
+    background-color: $gray;
+
+    &__container {
+        @extend %container;
+        @include flex(2.2222222222222223em, column, center, center); //40
+    }
+
+    &__title {
+        @include flex(0.4444444444444444em, column, center, center); //8
+        text-align: center;
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        background-image: $gradient-primary;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+    }
+
+    &__p {
+        
+        &--1 {
+            font-size: 1.1111111111111112em; //20
+        }
+
+        &--2 {
+            font-size: 1.2222222222222223em; //22
+            text-align: center;
+            width: 60%;
+        }
+    }
+
+    &__ul {
+        @include flex(1.7777777777777777em, row, center, center) //32
+    }
+
+    &__li {
+        @extend %verticalCard;
+
+        &:nth-child(odd) {
+            margin-top: 4.444444444444445em; //80
+        }
+    }
+
+    @include laptop() {
+        &__ul {
+            flex-wrap: wrap;
+        }
+
+        &__li {
+    
+            &:nth-child(odd) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include mobile() {
+        &__p {
+    
+            &--2 {
+                width: 100%;
+            }
+        }
+
+        &__li {
+            margin-left: 2.2222222222222223em; //40
+    
+            &:nth-child(odd) {
+                margin-top: 0;
+                margin-left: 0;
+                margin-right: 2.2222222222222223em; //40
+            }
+        }
+    }
+    
+}
