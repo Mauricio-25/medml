@@ -1,0 +1,86 @@
+
+.discover {
+    &__container {
+        @extend %container;
+        @include flex(2.2222222222222223em, row, space-between, center); //40
+    }
+
+    &__col {
+        @include flex(2.7777777777777777em, column, center, start); //50
+        max-width: 475px;
+    }
+
+    &__div {
+        @include flex(0.8888888888888888em, column, center, start); //16
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        text-align: start
+    }
+
+    &__button {
+        @extend %button;
+        background: $gradient-primary;
+    }
+
+    &__block {
+        grid-column: span 2;
+        @include flex(0, row, center, center);
+    }
+
+    &__ul {
+        @include grid(1.3333333333333333em, 2, 2, 1fr, 1fr, auto, auto);//24
+    }
+
+    &__li {
+        @extend %verticalCard;
+        width: 17.5em; //315
+        height: 13.88888888888889em; //250
+        text-align: start;
+        align-items: end;
+
+        & .div {
+            align-items: start;
+        }
+    }
+
+    @include desktop() {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__col {
+            align-items: center;
+            text-align: center;
+        }
+
+        &__h2 {
+            text-align: center;
+        }
+    }
+
+    @include tablet() {
+        &__ul {
+            grid-template-columns: 1fr;
+        }
+
+        &__li {
+            width: 100%;
+            max-width: 17.5em; //315;
+        }
+
+        &__block {
+            grid-column: span 1;
+        }
+
+        &__col {
+            align-items: start;
+            text-align: start;
+        }
+
+        &__h2 {
+            text-align: start;
+        }
+    }
+}
