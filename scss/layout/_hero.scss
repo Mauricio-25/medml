@@ -7,41 +7,35 @@
     // ! COLUMNA 01
 
     &__col1 {
-        @include flex(32px, column, center, start)
+        @include flex(1.7777777777777777em, column, center, start); //32
     }
 
     &__content {
-        @include flex(24px, column, center, start)
+        @include flex(1.3333333333333333em, column, center, start) //24
     }
 
     &__h1 {
-        font-size: size($h1-mobile, $h1);
+        @extend %heading-1;
     }
 
     &__span {
-        font-size: 22px; //22
+        font-size: 1.2222222222222223em; //22
         color: $grayLight;
     }
 
     &__p {
-        font-size: 22px;
+        font-size: 1.2222222222222223em; //22
     }
 
     &__button {
         @extend %button;
-        width: 11.666666666666666em; //210
-        background: $primary;
     }
 
     &__picture {
-        min-width: 300px;
+        min-width: 16.666666666666668em; //300
     }
 
     // ! QUERIES
-
-    @include desktop() {
-
-    }
 
     @include tablet() {
         &__container {
@@ -49,7 +43,7 @@
         }
 
         &__picture {
-            max-width: 300px;  //18
+            max-width: 16.666666666666668em;  //300
             min-width: unset;
         }
     }

@@ -94,6 +94,10 @@
     }
 
     @include tablet() {
+        &__container {
+            justify-content: center;
+        }
+        
         &__div {
             display: none;
         }

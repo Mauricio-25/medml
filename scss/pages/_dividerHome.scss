@@ -1,0 +1,10 @@
+
+.dividerHome {
+    @extend %divider;
+    background: $gradient-primary;
+
+    & .button {
+        background-color: $white;
+        color: $primary;
+    }
+}

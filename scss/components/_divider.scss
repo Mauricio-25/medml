@@ -1,0 +1,32 @@
+
+%divider {
+    text-align: center;
+    background-color: $gray;
+
+    & .container {
+        @extend %container;
+        @include flex(1.3333333333333333em, column, center, center) //24
+    }
+
+    & .div {
+        @include flex(0.8888888888888888em, column, center, center); //16
+        padding: 0 size(2.2222222222222223em, 8.555555555555555em); //40 154
+        width: 60%
+    }
+
+    & .h2 {
+        @extend %heading-1;
+    }
+
+    & .button {
+        @extend %button;
+        background-color: $primary;
+        width: 11.666666666666666em; //210
+    }
+
+    @include desktop() {
+        & .div {
+            width: 100%;
+        }
+    }
+}

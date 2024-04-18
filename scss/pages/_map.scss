@@ -1,0 +1,67 @@
+
+.map {
+    &__container {
+        @extend %container;
+        @include grid(1.7777777777777777em, 2, 1, 1.3fr, 1fr, auto); //32
+        align-items: center
+    }
+
+    &__div {
+        @include flex(1.7777777777777777em, column, center, start); //32
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        text-align: start;
+        color: $tertiary;
+    }
+
+    &__ul {
+        @include flex(1.3333333333333333em, column, center, start); //24
+    }
+
+    &__li {
+        @include flex(0.8888888888888888em, row, center, center); //16
+    }
+
+    &__icon {
+        width: 2.111111111111111em; //38
+    }
+
+    &__b {
+        color: $tertiary;
+    }
+
+    &__p {
+        font-size: 1.1111111111111112em; //20
+    }
+
+    // ! QUERIES
+
+    @include tablet() {
+        &__container {
+            @include flex(1.7777777777777777em, column, center, center);//32
+            text-align: center;
+        }
+
+        &__img {
+            max-width: 450px; //450
+        }
+
+        &__div {
+            align-items: center;
+        }
+
+        &__ul {
+            align-items: center;
+        }
+
+        &__li {
+            flex-direction: column;
+        }
+
+        &__p {
+            @include flex(8px, column, center, center) //8
+        }
+    }
+}

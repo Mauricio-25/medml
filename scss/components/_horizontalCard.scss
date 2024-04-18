@@ -1,0 +1,42 @@
+
+%horizontalCard {
+
+    @include flex(0.8888888888888888em, row, start, start);//16
+
+    & .circle {
+        background-color: $tertiary;
+        border-radius: 50%;
+        width: 2.7777777777777777em; //50
+        height: 2.7777777777777777em;
+        @include flex(0, row, center, center)
+    }
+
+    & .img {
+        width: 1.1111111111111112em; //20
+    }
+
+    & .div {
+        @include flex(0.4444444444444444em, column, center, start); //8
+    }
+
+    & .h3 {
+        color: $tertiary;
+        font-weight: 700;
+        font-size: 1.3333333333333333em; //24
+    }
+
+    & .p {
+        font-size: 0.8888888888888888em; //16
+    }
+
+    @include mobile() {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        & .div {
+            align-items: center;
+        }
+    }
+}

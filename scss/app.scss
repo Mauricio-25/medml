@@ -17,14 +17,25 @@
 
 // COMPONENTS
 
+@import "components/heading-1";
+@import "components/heading-2";
 @import "components/button";
 @import "components/container";
+@import "components/simpleCard";
+@import "components/horizontalCard";
+@import "components/divider";
 
 // LAYOUT
 
 @import "layout/header";
 @import "layout/hero";
+@import "layout/dividerSection";
 @import "layout/footer";
 
 // PAGES
 
+@import "pages/imagine";
+@import "pages/needUs";
+@import "pages/dividerHome";
+@import "pages/map";
+@import "pages/networks";
