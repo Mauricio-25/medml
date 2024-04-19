@@ -15,10 +15,7 @@
 
     &__h2 {
         @extend %heading-2;
-        background-image: $gradient-primary;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 800;
+        @include h2-gradient(800);
     }
 
     &__content {

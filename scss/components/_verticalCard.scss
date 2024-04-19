@@ -10,11 +10,8 @@
     padding: 1.3333333333333333em 0.8888888888888888em; //24 16
 
     & .circle {
-        border-radius: 50%;
-        width: 2.7777777777777777em; //50
-        height: 2.7777777777777777em; //50
+        @include circle(2.7777777777777777em); //50
         border: 1px solid $primary;
-        @include flex(0, row, center, center);
     }
 
     & .icon {

@@ -44,6 +44,21 @@
   }
 }
 
+@mixin h2-gradient($weight) {
+  background-image: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: $weight;
+}
+
+@mixin circle($s) {
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+  @include flex(0, row, center, center);
+  border: 1px solid $tertiary;
+}
+
 // ! MEDIA QUERIES
 
 @mixin mobile() {

@@ -1,0 +1,56 @@
+
+.impact {
+
+    &__container {
+        @extend %container;
+        @include flex(3.111111111111111em, column, center, center); //56
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        @include h2-gradient(800);
+    }
+
+    &__circle {
+        @include circle(3.888888888888889em) //70
+    }
+
+    &__icon {
+        width: 1em; //18
+    }
+
+    &__div {
+        @include flex(4.777777777777778em, row, center, center); //6
+    }
+
+    &__h3 {
+        font-size: 1.7777777777777777em; //32
+        font-weight: 700;
+    }
+
+    &__col1 {
+        @include flex(1.7777777777777777em, column, center, center); //32
+        text-align: center
+    }
+
+    &__col2 {
+        @include flex(1.3333333333333333em, column, center, center); //24px
+    }
+
+    &__content {
+        @include flex(3.111111111111111em, column, center, center);
+    }
+
+    // ! QUERIES
+
+    @include tablet() {
+        &__div {
+            flex-direction: column;
+        }
+
+        &__col2 {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

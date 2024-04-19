@@ -4,11 +4,8 @@
     @include flex(0.8888888888888888em, row, start, start);//16
 
     & .circle {
+        @include circle(2.7777777777777777em); //50
         background-color: $tertiary;
-        border-radius: 50%;
-        width: 2.7777777777777777em; //50
-        height: 2.7777777777777777em;
-        @include flex(0, row, center, center)
     }
 
     & .img {

@@ -4,12 +4,9 @@
     text-align: center;
 
     & .circle {
-        width: 2.7777777777777777em; //50
-        height: 2.7777777777777777em; //50
+        @include circle(2.7777777777777777em); //50
         padding: 0.7777777777777778em 0.6111111111111112em; //14 11
-        border-radius: 50%;
         border: 1px solid $white;
-        @include flex(0, row, center, center);
     }
     
 }
