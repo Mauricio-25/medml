@@ -22,6 +22,8 @@
         @extend %heading-2;
         @include h2-gradient(800);
         font-size: 1.7777777777777777em; //32
+        padding-bottom: 0.6666666666666666em; //12px
+        border-bottom: 1px solid $primary;
     }
 
     & .p {

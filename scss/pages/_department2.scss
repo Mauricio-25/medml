@@ -1,0 +1,11 @@
+
+.department2 {
+
+    @extend %department;
+    background-color: $gray;
+
+    &__container {
+        @extend %container;
+        @include flex(0.5555555555555556em, column, center, center); //10
+    }
+}
