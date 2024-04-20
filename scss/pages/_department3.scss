@@ -1,0 +1,9 @@
+
+.department3 {
+
+    @extend %department;
+
+    &__container {
+        @extend %container;
+    }
+}

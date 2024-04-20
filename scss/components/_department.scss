@@ -4,6 +4,7 @@
 
     & .row {
         @include flex(1.7777777777777777em, column, center, center); //32
+        width: 100%;
     }
 
     // ! TITLE
@@ -42,9 +43,11 @@
         }
     }
 
+
     // ! CONTENT
 
     & .content {
+        width: 100%;
         border: 1px solid $white;
         border-radius: 1.3333333333333333em; //24
         padding: 0.8888888888888888em 1.3333333333333333em; //16 24
@@ -73,6 +76,7 @@
     // ! STEP 
 
     & .group {
+        width: 80%;
         margin-top: 1.3333333333333333em; //24
         @include flex(1.7777777777777777em, column, center, center); //32
     }
@@ -88,6 +92,11 @@
 
         &--2 {
             @include flex(0, column, space-evenly, center);
+        }
+
+        &--3 {
+            list-style-type: disc;
+            font-size: 0.8888888888888888em; //16
         }
 
         &--responsive {
@@ -163,6 +172,12 @@
             object-fit: contain;
             width: auto;
         }
+
+        &--3 {
+            height: 23.88888888888889em; //430
+            object-fit: contain;
+            width: auto;
+        }
     }
 
     // ! QUERIES
@@ -188,7 +203,7 @@
         & .line {
             transform: rotate(90deg);
 
-            &--2 {
+            &--2, &--3 {
                 transform: rotate(90deg);
             }
         }
@@ -199,6 +214,10 @@
 
         & .step {
             height: auto;
+        }
+
+        & .group {
+            width: 100%;
         }
 
         & .ul {
@@ -219,6 +238,16 @@
 
         & .block {
             flex-direction: column;
+        }
+
+        & .line {
+            &--3 {
+                height: 12.777777777777779em; //230
+            }
+        }
+
+        & .bar {
+            width: 0.5555555555555556em; //15
         }
     }
 

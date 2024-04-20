@@ -53,14 +53,14 @@
     &__collapse {
         position: absolute;
         left: 50%;
-        width: 45px;
+        width: 2.5em; //45
         height: 0px;
         transition: 0.3s;
         overflow: hidden;
         transform: translateY(8px) translateX(-50%);
 
         &--open {
-            height: 72px;
+            height: 4em; //72
         }
     }
 
@@ -68,11 +68,11 @@
         background-color: #414141;
 
         &:nth-child(1) {
-            border-radius: 16px 16px 0 0 ;
+            border-radius: 0.8888888888888888em 0.8888888888888888em 0 0 ; //16
         }
 
         &:nth-child(2) {
-            border-radius: 0 0 16px 16px;
+            border-radius: 0 0 0.8888888888888888em 0.8888888888888888em; //16
         }
     }
 
@@ -89,8 +89,8 @@
         }
     }
 
-    &__flags {
-        width: 24px;
+    &__flags, &__arrow {
+        width: 1.3333333333333333em; //24
     }
 
     @include tablet() {
