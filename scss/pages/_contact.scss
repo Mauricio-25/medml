@@ -1,0 +1,99 @@
+
+
+.contact {
+
+    background-color: $gray;
+
+    &__container {
+        @extend %container;
+        @include grid(2.2222222222222223em, 2, 1, 1fr, 1fr, auto); //40
+    }
+
+    &__div {
+        @include flex(1.1111111111111112em, column, center, start); //20
+    }
+
+    &__h2 {
+        @extend %heading-1;
+        @include h2-gradient(800)
+    }
+
+    &__p {
+        font-size: 1.2222222222222223em; //22
+    }
+
+    &__block {
+        margin-top: 1.8888888888888888em; //34
+        @include flex(20px, column, center, start); //20
+    }
+
+    &__b {
+        font-size: 1.7777777777777777em; //32
+    }
+
+    &__a {
+        transition: 0.3s;
+
+        &:hover {
+            color: $tertiary
+        }
+    }
+
+    &__form {
+        @include flex(0.8888888888888888em, column, center, center);//16
+    }
+
+    &__field {
+        @include flex(0.8333333333333334em, column, center, start); //15
+        width: 100%;
+    }
+
+    &__label {
+        font-size: 0.7777777777777778em; //14
+    }
+
+    &__input, &__textarea {
+        font-size: 0.7777777777777778em; //14
+        width: 100%;
+        border: 1px solid $white;
+        padding: 0.7142857142857143em; //10
+        resize: none;
+        border-radius: 0.5714285714285714em; //8
+        transition: 0.3s;
+        color: $grayLight;
+
+        &:focus {
+            border: 1px solid $tertiary;
+            color: $white;
+        }
+    }
+
+    &__button {
+        @extend %button;
+        background: $gradient-primary;
+        width: 100%;
+    }
+
+    // ! QUERIES
+
+    @include laptop() {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__div {
+            align-items: center;
+            text-align: center;
+        }
+
+        &__circle {
+            transform: rotate(90deg);
+        }
+
+
+        &__block {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}

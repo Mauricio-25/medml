@@ -111,7 +111,7 @@ body {
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale; }
 
-.dividerSection .h2, .dividerHome .h2, .hero__h1 {
+.dividerSection .h2, .dividerHome .h2, .hero__h1, .comment__h2, .contact__h2 {
   font-size: clamp(42px, calc(0.0334821429 * (100vw - 640px) + 42px), 72px);
   font-weight: 700; }
 
@@ -120,7 +120,7 @@ body {
   font-weight: 700;
   text-align: center; }
 
-.dividerSection .button, .dividerHome .button, .header__button, .hero__button, .networks__button, .why__button, .discover__button {
+.dividerSection .button, .dividerHome .button, .header__button, .hero__button, .networks__button, .why__button, .discover__button, .comment__button, .contact__button {
   width: 11.666666666666666em;
   padding: 0.8888888888888888em 1.3333333333333333em;
   color: #FFFAFA;
@@ -130,10 +130,10 @@ body {
   cursor: pointer;
   transition: 0.3s;
   background: #BF3131; }
-  .dividerSection .button:hover, .dividerHome .button:hover, .header__button:hover, .hero__button:hover, .networks__button:hover, .why__button:hover, .discover__button:hover {
+  .dividerSection .button:hover, .dividerHome .button:hover, .header__button:hover, .hero__button:hover, .networks__button:hover, .why__button:hover, .discover__button:hover, .comment__button:hover, .contact__button:hover {
     opacity: .8; }
 
-.dividerSection .container, .dividerHome .container, .header__container, .hero__container, .footer__container, .imagine__container, .needUs__container, .map__container, .networks__container, .why__container, .revolutionize__container, .department1__container, .department2__container, .department3__container, .department4__container, .discover__container, .impact__container {
+.dividerSection .container, .dividerHome .container, .header__container, .hero__container, .footer__container, .imagine__container, .needUs__container, .map__container, .networks__container, .why__container, .revolutionize__container, .department1__container, .department2__container, .department3__container, .department4__container, .discover__container, .impact__container, .comment__container, .contact__container {
   margin-left: auto;
   margin-right: auto;
   max-width: 1536px;
@@ -1100,5 +1100,151 @@ body {
   .impact__col2 {
     flex-direction: row;
     flex-wrap: wrap; } }
+
+.comment__container {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; }
+.comment__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.8888888889em; }
+.comment__h2 {
+  background-image: linear-gradient(90deg, #bf3131 0%, #692e2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800; }
+.comment__p {
+  font-size: 1.2222222222222223em; }
+.comment__circle {
+  margin-top: 0.8888888888888888em;
+  width: 3.1666666667em;
+  height: 3.1666666667em;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #CC5A5A;
+  border: 1px solid #FFFAFA; }
+.comment__arrow {
+  width: 1.6666666666666667em; }
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8888888889em; }
+.comment__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.8333333333em;
+  width: 100%; }
+.comment__label {
+  font-size: 0.7777777777777778em; }
+.comment__input, .comment__textarea {
+  font-size: 0.7777777777777778em;
+  width: 100%;
+  border: 1px solid #FFFAFA;
+  padding: 0.7142857142857143em;
+  resize: none;
+  border-radius: 0.5714285714285714em;
+  transition: 0.3s;
+  color: #8E8E8E; }
+  .comment__input:focus, .comment__textarea:focus {
+    border: 1px solid #CC5A5A;
+    color: #FFFAFA; }
+.comment__button {
+  background: linear-gradient(90deg, #bf3131 0%, #692e2e 100%); }
+@media (width < 1024px) {
+  .comment__container {
+    grid-template-columns: 1fr;
+    gap: 2.2222222222222223em; }
+  .comment__div {
+    align-items: center;
+    text-align: center; }
+  .comment__circle {
+    transform: rotate(90deg); } }
+
+.contact {
+  background-color: #141414; }
+  .contact__container {
+    display: grid;
+    gap: 2.2222222222em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; }
+  .contact__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.1111111111em; }
+  .contact__h2 {
+    background-image: linear-gradient(90deg, #bf3131 0%, #692e2e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800; }
+  .contact__p {
+    font-size: 1.2222222222222223em; }
+  .contact__block {
+    margin-top: 1.8888888888888888em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px; }
+  .contact__b {
+    font-size: 1.7777777777777777em; }
+  .contact__a {
+    transition: 0.3s; }
+    .contact__a:hover {
+      color: #CC5A5A; }
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8888888889em; }
+  .contact__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.8333333333em;
+    width: 100%; }
+  .contact__label {
+    font-size: 0.7777777777777778em; }
+  .contact__input, .contact__textarea {
+    font-size: 0.7777777777777778em;
+    width: 100%;
+    border: 1px solid #FFFAFA;
+    padding: 0.7142857142857143em;
+    resize: none;
+    border-radius: 0.5714285714285714em;
+    transition: 0.3s;
+    color: #8E8E8E; }
+    .contact__input:focus, .contact__textarea:focus {
+      border: 1px solid #CC5A5A;
+      color: #FFFAFA; }
+  .contact__button {
+    background: linear-gradient(90deg, #bf3131 0%, #692e2e 100%);
+    width: 100%; }
+  @media (width < 1024px) {
+    .contact__container {
+      grid-template-columns: 1fr; }
+    .contact__div {
+      align-items: center;
+      text-align: center; }
+    .contact__circle {
+      transform: rotate(90deg); }
+    .contact__block {
+      align-items: center;
+      text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
