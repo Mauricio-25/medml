@@ -1,0 +1,21 @@
+
+%simpleSection {
+
+    & .container {
+        @extend %container;
+        @include flex(1.4444444444444444em, column, center, center); //26
+    }
+
+    & .h2 {
+        @extend %heading-2;
+        @include h2-gradient(800);
+        padding-bottom: 24px; //24
+        border-bottom: 1px solid $primary;
+    }    
+
+    & .p {
+        font-size: 1.1111111111111112em; //20
+        max-width: 44.44444444444444em; //800
+        text-align: center;
+    }
+}
