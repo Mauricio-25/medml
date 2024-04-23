@@ -111,16 +111,16 @@ body {
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale; }
 
-.dividerSection .h2, .dividerHome .h2, .hero__h1, .comment__h2, .contact__h2 {
+.dividerSection .h2, .dividerSection--2 .h2, .dividerHome .h2, .hero__h1, .comment__h2, .contact__h2 {
   font-size: clamp(42px, calc(0.0334821429 * (100vw - 640px) + 42px), 72px);
   font-weight: 700; }
 
-.department1 .h2, .department2 .h2, .department3 .h2, .department4 .h2, .department1 .h3, .department2 .h3, .department3 .h3, .department4 .h3, .mission .h2, .choose .h2, .imagine__h2, .needUs__h2, .map__h2, .networks__h2, .why__h2, .revolutionize__h2, .discover__h2, .impact__h2, .heroSection__h2 {
+.department1 .h2, .department2 .h2, .department3 .h2, .department4 .h2, .department1 .h3, .department2 .h3, .department3 .h3, .department4 .h3, .mission .h2, .choose .h2, .keyFeatures .h2, .underwriters .h2, .adjudicator .h2, .networkTeam .h2, .imagine__h2, .needUs__h2, .map__h2, .networks__h2, .why__h2, .revolutionize__h2, .discover__h2, .impact__h2, .heroSection__h2 {
   font-size: clamp(32px, calc(0.0111607143 * (100vw - 640px) + 32px), 42px);
   font-weight: 700;
   text-align: center; }
 
-.dividerSection .button, .dividerHome .button, .header__button, .hero__button, .networks__button, .why__button, .discover__button, .comment__button, .contact__button {
+.dividerSection .button, .dividerSection--2 .button, .dividerHome .button, .header__button, .hero__button, .networks__button, .why__button, .discover__button, .comment__button, .contact__button {
   width: 11.666666666666666em;
   padding: 0.8888888888888888em 1.3333333333333333em;
   color: #FFFAFA;
@@ -130,23 +130,23 @@ body {
   cursor: pointer;
   transition: 0.3s;
   background: #BF3131; }
-  .dividerSection .button:hover, .dividerHome .button:hover, .header__button:hover, .hero__button:hover, .networks__button:hover, .why__button:hover, .discover__button:hover, .comment__button:hover, .contact__button:hover {
+  .dividerSection .button:hover, .dividerSection--2 .button:hover, .dividerHome .button:hover, .header__button:hover, .hero__button:hover, .networks__button:hover, .why__button:hover, .discover__button:hover, .comment__button:hover, .contact__button:hover {
     opacity: .8; }
 
-.dividerSection .container, .dividerHome .container, .mission .container, .choose .container, .header__container, .hero__container, .footer__container, .imagine__container, .needUs__container, .map__container, .networks__container, .why__container, .revolutionize__container, .department1__container, .department2__container, .department3__container, .department4__container, .discover__container, .impact__container, .comment__container, .contact__container, .heroSection__container {
+.dividerSection .container, .dividerSection--2 .container, .dividerHome .container, .mission .container, .choose .container, .keyFeatures .container, .underwriters .container, .adjudicator .container, .networkTeam .container, .header__container, .hero__container, .footer__container, .imagine__container, .needUs__container, .map__container, .networks__container, .why__container, .revolutionize__container, .department1__container, .department2__container, .department3__container, .department4__container, .discover__container, .impact__container, .comment__container, .contact__container, .heroSection__container {
   margin-left: auto;
   margin-right: auto;
   max-width: 1536px;
   padding: clamp(70px, calc(0.0334821429 * (100vw - 640px) + 70px), 100px) clamp(35px, calc(0.0881696429 * (100vw - 640px) + 35px), 114px) clamp(110px, calc(0.0334821429 * (100vw - 640px) + 110px), 140px) clamp(35px, calc(0.0881696429 * (100vw - 640px) + 35px), 114px); }
 
-.department1 .div, .department2 .div, .department3 .div, .department4 .div, .imagine__simpleCard, .needUs__simpleCard {
+.department1 .div, .department2 .div, .department3 .div, .department4 .div, .keyFeatures .li, .underwriters .li, .adjudicator .li, .networkTeam .li, .imagine__simpleCard, .needUs__simpleCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.4444444444em;
   text-align: center; }
-  .department1 .div .circle, .department2 .div .circle, .department3 .div .circle, .department4 .div .circle, .imagine__simpleCard .circle, .needUs__simpleCard .circle {
+  .department1 .div .circle, .department2 .div .circle, .department3 .div .circle, .department4 .div .circle, .keyFeatures .li .circle, .underwriters .li .circle, .adjudicator .li .circle, .networkTeam .li .circle, .imagine__simpleCard .circle, .needUs__simpleCard .circle {
     width: 2.7777777778em;
     height: 2.7777777778em;
     border-radius: 50%;
@@ -199,16 +199,16 @@ body {
       .networks__li .div {
         align-items: center; } }
 
-.dividerSection, .dividerHome {
+.dividerSection, .dividerSection--2, .dividerHome {
   text-align: center;
   background-color: #141414; }
-  .dividerSection .container, .dividerHome .container {
+  .dividerSection .container, .dividerSection--2 .container, .dividerHome .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.3333333333em; }
-  .dividerSection .div, .dividerHome .div {
+  .dividerSection .div, .dividerSection--2 .div, .dividerHome .div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,11 +216,11 @@ body {
     gap: 0.8888888889em;
     padding: 0 clamp(2.2222222222em, calc(0.0070684524 * (100vw - 640px) + 2.2222222222em), 8.5555555556em);
     width: 60%; }
-  .dividerSection .button, .dividerHome .button {
+  .dividerSection .button, .dividerSection--2 .button, .dividerHome .button {
     background-color: #BF3131;
     width: 11.666666666666666em; }
   @media (width < 1280px) {
-    .dividerSection .div, .dividerHome .div {
+    .dividerSection .div, .dividerSection--2 .div, .dividerHome .div {
       width: 100%; } }
 
 .why__li {
@@ -516,6 +516,50 @@ body {
   max-width: 44.44444444444444em;
   text-align: center; }
 
+.keyFeatures .container, .underwriters .container, .adjudicator .container, .networkTeam .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.1111111111em; }
+.keyFeatures .title, .underwriters .title, .adjudicator .title, .networkTeam .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0; }
+.keyFeatures .h2, .underwriters .h2, .adjudicator .h2, .networkTeam .h2 {
+  background-image: linear-gradient(90deg, #bf3131 0%, #692e2e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #BF3131; }
+.keyFeatures .span, .underwriters .span, .adjudicator .span, .networkTeam .span {
+  text-transform: uppercase;
+  font-size: 0.8888888888888888em;
+  color: #8E8E8E; }
+.keyFeatures .ul, .underwriters .ul, .adjudicator .ul, .networkTeam .ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5555555556em;
+  flex-wrap: wrap; }
+.keyFeatures .li, .underwriters .li, .adjudicator .li, .networkTeam .li {
+  max-width: 13.555555555555555em;
+  gap: 0.8888888888888888em; }
+.keyFeatures .li .circle, .underwriters .li .circle, .adjudicator .li .circle, .networkTeam .li .circle {
+  border: 1px solid #CC5A5A;
+  width: 3.888888888888889em;
+  height: 3.888888888888889em; }
+.keyFeatures .icon, .underwriters .icon, .adjudicator .icon, .networkTeam .icon {
+  width: auto; }
+  .keyFeatures .icon--left, .underwriters .icon--left, .adjudicator .icon--left, .networkTeam .icon--left {
+    transform: rotate(90deg); }
+.keyFeatures .p, .underwriters .p, .adjudicator .p, .networkTeam .p {
+  font-size: 0.8888888888888888em; }
+
 .header__container {
   padding: 0.8888888889em clamp(35px, calc(0.0881696429 * (100vw - 640px) + 35px), 114px);
   display: flex;
@@ -628,6 +672,9 @@ body {
   .hero__picture {
     max-width: 16.666666666666668em;
     min-width: unset; } }
+
+.dividerSection--2 {
+  background-color: unset; }
 
 .footer {
   background: linear-gradient(90deg, #bf3131 0%, #692e2e 100%); }
@@ -1282,5 +1329,11 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: center; }
+
+.underwriters {
+  background-color: #141414; }
+
+.networkTeam {
+  background-color: #141414; }
 
 /*# sourceMappingURL=style.css.map */

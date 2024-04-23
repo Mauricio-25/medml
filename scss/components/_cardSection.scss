@@ -1,0 +1,53 @@
+
+%cardSection {
+    & .container {
+        @extend %container;
+        @include flex(3.111111111111111em, column, center, center); //56
+    }
+
+    & .title {
+        @include flex(0, column, center, center);
+    }
+
+    & .h2 {
+        @extend %heading-2;
+        @include h2-gradient(800);
+        padding-bottom: 24px;
+        border-bottom: 1px solid $primary;
+    }
+
+    & .span {
+        text-transform: uppercase;
+        font-size: 0.8888888888888888em; //16
+        color: $grayLight;
+    }
+
+    & .ul {
+        @include flex(7.555555555555555em, row, center, center); //136
+        flex-wrap: wrap
+    }
+
+    & .li {
+        @extend %simpleCard;
+        max-width: 13.555555555555555em; //244
+        gap: 0.8888888888888888em; //16
+    }
+
+    & .li .circle {
+        border: 1px solid $tertiary;
+        width: 3.888888888888889em; //70
+        height: 3.888888888888889em; //70
+    }
+
+    & .icon {
+        width: auto;
+
+        &--left {
+            transform: rotate(90deg);
+        }
+    }
+
+    & .p {
+        font-size: 0.8888888888888888em; //16
+    }
+}

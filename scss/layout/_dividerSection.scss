@@ -1,4 +1,9 @@
 
 .dividerSection {
     @extend %divider;
+
+    &--2 {
+        @extend %divider;
+        background-color: unset;
+    }
 }
