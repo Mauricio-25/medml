@@ -16,6 +16,11 @@
 
     &__li {
         @extend %numberCard;
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
     }
 
     &__button {

@@ -39,6 +39,11 @@
         height: 13.88888888888889em; //250
         text-align: start;
         align-items: end;
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
 
         & .div {
             align-items: start;
@@ -72,15 +77,6 @@
 
         &__block {
             grid-column: span 1;
-        }
-
-        &__col {
-            align-items: start;
-            text-align: start;
-        }
-
-        &__h2 {
-            text-align: start;
         }
     }
 }

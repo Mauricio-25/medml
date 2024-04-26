@@ -60,6 +60,26 @@ function getElement(cadena) {
 
 
 
+// ! INITIALIZATION OF AOS
+
+AOS.init();
+
+window.addEventListener('scroll', function() {
+    // Verificar si elemento usuario está desplazándose hacia arriba
+    if (this.oldScroll > this.scrollY) {
+      // Restablecer la animación
+      document.querySelectorAll('[data-aos]').forEach(function(elemento) {
+        elemento.setAttribute('data-aos', elemento.getAttribute('data-aos'));
+        elemento.setAttribute('data-aos-duration', '400');
+      });
+    }
+    this.oldScroll = this.scrollY;
+});
+
+
+
+
+
 
 // ! HEADER
 

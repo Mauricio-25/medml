@@ -40,6 +40,11 @@
     @include tablet() {
         &__container {
             flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        &__col1 {
+            align-items: center;
         }
 
         &__picture {

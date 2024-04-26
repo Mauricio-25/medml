@@ -1,0 +1,66 @@
+
+.careers {
+    &__container {
+        @extend %container;
+        @include flex(74px, column, center, center); //74
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        text-align: start;
+        width: 100%;
+    }
+
+    &__block {
+        @include flex(3.5555555555555554em, column, center, center); //64
+        max-width: 44.44444444444444em; //800
+    }
+
+    &__content {
+        @include flex(1.7777777777777777em, column, center, center); //32
+    }
+
+    &__icons {
+        @include flex(0.6111111111111112em, row, center, end); //11
+
+    }
+
+    &__circle {
+        @include circle( size(60px,90px) ); 
+        background-color: $tertiary;
+        transition: 0.4s;
+
+        &:nth-child(2) {
+            margin-bottom: size(40px, 62px); //62
+        }
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
+    }
+
+    &__icon {
+        width: size(20px,35px); //35
+    }
+
+    &__p {
+        text-align: center;
+    }
+
+    &__b {
+        color: $primary;
+    }
+
+    &__button {
+        @extend %button;
+        background: $gradient-primary;
+    }
+
+    // ! QUERIES
+
+    @include mobile() {
+        &__h2 {
+            text-align: center;
+        }
+    }
+}

@@ -12,7 +12,12 @@
     }
 
     &__circle {
-        @include circle(3.888888888888889em) //70
+        @include circle(3.888888888888889em); //70
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__icon {

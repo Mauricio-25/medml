@@ -37,6 +37,11 @@
 
     &__li {
         @extend %verticalCard;
+        transition: 0.4s;
+
+        &:hover {
+            transform: translateY(-10%) !important;
+        }
 
         &:nth-child(odd) {
             margin-top: 4.444444444444445em; //80
@@ -61,16 +66,6 @@
     
             &--2 {
                 width: 100%;
-            }
-        }
-
-        &__li {
-            margin-left: 2.2222222222222223em; //40
-    
-            &:nth-child(odd) {
-                margin-top: 0;
-                margin-left: 0;
-                margin-right: 2.2222222222222223em; //40
             }
         }
     }

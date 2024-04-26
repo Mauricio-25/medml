@@ -22,6 +22,11 @@
 
     &__li {
         @include flex(0.8888888888888888em, row, center, center); //16
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
     }
 
     &__icon {

@@ -33,6 +33,11 @@
 
     &__li {
         @extend %horizontalCard;
+        transition: 0.4s;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
     }
 
     &__button {
@@ -49,30 +54,38 @@
 
     &__img {
         opacity: 0.4;
-        transform: scaleX(-1);
+        transform: scaleX(-1) translateY(-50%);
 
         max-width: unset;
         width: auto;
-        height: 100%;
+        height: 60%;
         object-fit: cover;
 
         position: absolute;
         right: 0;
-        top: 0;
+        top: 50%;
 
     }
 
     // ! QUERIES
 
     @include laptop() {
+
+        &__div {
+            position: relative;
+            z-index: 2;
+        }
+
         &__picture {
             position: absolute;
-            z-index: -1;
+            z-index: 1;
         }
 
         &__img {
             width: 100%;
             height: auto;
+            transform: scaleX(-1);
+            top: 0;
         }
 
         &__content {
