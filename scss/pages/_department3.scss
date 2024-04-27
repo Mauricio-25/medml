@@ -6,4 +6,10 @@
     &__container {
         @extend %container;
     }
+
+    &__background {
+        @extend %background;
+        bottom: 18.27777777777778em; //329
+        left: 0; //
+    }
 }

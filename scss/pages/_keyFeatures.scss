@@ -1,4 +1,16 @@
 
 .keyFeatures {
     @extend %cardSection;
+
+    &__background {
+        @extend %background;
+        top: 50%; //
+        left: -3.888888888888889em; //-70
+
+        &--2 {
+            @extend %background;
+            top: 24px; //24
+            right: -54px; //-54
+        }
+    }
 }

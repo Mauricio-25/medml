@@ -5,6 +5,12 @@
         @include flex(64px, column, center, center);//64
     }
 
+    &__background {
+        @extend %background;
+        bottom: 9.833333333333334em; //177
+        left: 1.7222222222222223em //31
+    }
+
     &__h2 {
         @extend %heading-2;
     }

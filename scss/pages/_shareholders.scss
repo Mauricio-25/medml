@@ -6,6 +6,18 @@
         @include flex(3.111111111111111em, column, center, center); //56
     }
 
+    &__background {
+        @extend %background;
+        bottom: 5.777777777777778em; //104
+        left: -3em; //-54
+
+        &--2 {
+            @extend %background;
+            top: 222px; //222
+            right: 64px; //64
+        }
+    }
+
     &__title {
         @include flex(0.4444444444444444em, column, center, center); //8
     }

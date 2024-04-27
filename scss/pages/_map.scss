@@ -6,6 +6,12 @@
         align-items: center
     }
 
+    &__background {
+        @extend %background;
+        bottom: 6.111111111111111em; //110
+        left: 2.5em; //45
+    }
+
     &__div {
         @include flex(1.7777777777777777em, column, center, start); //32
     }

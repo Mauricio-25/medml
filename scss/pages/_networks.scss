@@ -8,6 +8,30 @@
         @include flex(3.111111111111111em, column, center, center);//56
     }
 
+    &__background {
+        @extend %background;
+        top: 13.555555555555555em; //244
+        right: 12em; //216
+
+        &--2 {
+            @extend %background;
+            top: 16.666666666666668em; //300
+            right: 7.222222222222222em; //130
+        }
+
+        &--3 {
+            @extend %background;
+            bottom: 16.166666666666668em; //291
+            right: 7.666666666666667em; //138
+        }
+
+        &--4 {
+            @extend %background;
+            bottom: 14.166666666666666em; //255
+            right: 15.555555555555555em; //280
+        }
+    }
+
     &__title {
         text-align: center;
         @include flex(0.8888888888888888em, column, center, center); //16

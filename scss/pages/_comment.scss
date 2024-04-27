@@ -6,6 +6,12 @@
 
     }
 
+    &__background {
+        @extend %background;
+        bottom: 7.722222222222222em; //139
+        left: -0.16666666666666666em; //-3
+    }
+
     &__div {
         @include flex(0.8888888888888888em, column, center, start); //16
     }

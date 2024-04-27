@@ -98,3 +98,64 @@ document.addEventListener("click", (event) => {
         headerLanguage.children[1].classList.remove("header__collapse--open");
     }
 });
+
+
+
+//! CARRUSEL CUSTOMERS 2
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    let splide2 = new Splide( '.customers2 .splide', {
+      type   : 'loop',
+      perPage: 3,
+      perMove: 3,
+      omitEnd: false,
+      classes: {
+        pagination: 'splide__pagination',
+        page      : 'splide__pagination__page',
+      },
+    } );
+    
+    splide2.mount();
+
+
+} );
+
+
+    
+// ! MODIFICAR EL EMENNTO SIGUIENTE Y ANTERIOR CUANDO SE HACE HOVER
+
+document.addEventListener( 'DOMContentLoaded', function() {
+const slides = document.querySelectorAll('.splide__slide');
+
+slides.forEach(function(slide) {
+    slide.addEventListener('mouseover', function() {
+        highlightSiblings(this);
+    });
+
+    slide.addEventListener('mouseout', function() {
+        removeHighlight();
+    });
+});
+
+function highlightSiblings(element) {
+    let siblings = document.querySelectorAll('.splide__slide');
+    let currentIndex = Array.prototype.indexOf.call(siblings, element);
+        
+    if (currentIndex > 0) {
+        siblings[currentIndex - 1].classList.add('highlight');
+    }
+        
+    if (currentIndex < siblings.length - 1) {
+        siblings[currentIndex + 1].classList.add('highlight');
+    }
+}
+
+function removeHighlight() {
+    let siblings = document.querySelectorAll('.splide__slide');
+        
+    siblings.forEach(function(sibling) {
+        sibling.classList.remove('highlight');
+    });
+}
+
+})

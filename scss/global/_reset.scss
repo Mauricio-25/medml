@@ -126,6 +126,11 @@ svg{
 
 /* Configuramos la tipografía para toda la web */
 
+section {
+  position: relative;
+  overflow: hidden;
+}
+
 body {
   height: 100%;
   position: relative;

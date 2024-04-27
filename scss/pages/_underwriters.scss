@@ -2,4 +2,10 @@
 .underwriters {
     @extend %cardSection;
     background-color: $gray;
+
+    &__background {
+        @extend %background;
+        top: 393px; //393
+        left: -0.7222222222222222em; //-13
+    }
 }

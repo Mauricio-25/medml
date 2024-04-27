@@ -5,6 +5,18 @@
         @include flex(74px, column, center, center); //74
     }
 
+    &__background {
+        @extend %background;
+        bottom: 2.7777777777777777em; //50
+        left: 2.5555555555555554em; //46
+
+        &--2 {
+            @extend %background;
+            bottom: 6.944444444444445em; //125
+            right: -1.2222222222222223em; //-22
+        }
+    }
+
     &__h2 {
         @extend %heading-2;
         text-align: start;

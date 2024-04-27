@@ -1,4 +1,10 @@
 
 .choose {
     @extend %simpleSection;
+
+    &__background {
+        @extend %background;
+        bottom: -41px; //-41
+        left: 50%; //
+    }
 }

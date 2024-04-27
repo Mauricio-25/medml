@@ -4,6 +4,18 @@
         @include flex(0, row, center, center);
     }
 
+    &__background {
+        @extend %background;
+        top: 10.166666666666666em; //183
+        right: -4.111111111111111em; //-74
+
+        &--2 {
+            @extend %background;
+            bottom: 207px; //207
+            left: 0.8888888888888888em; //16
+        }
+    }
+
     // ! COLUMNA 01
 
     &__col1 {

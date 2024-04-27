@@ -5,6 +5,18 @@
         @include flex(56px, column, center, center); //56
     }
 
+    &__background {
+        @extend %background;
+        bottom: 11.88888888888889em; //214
+        left: -3.888888888888889em; //-70
+
+        &--2 {
+            @extend %background;
+            top: 1.3333333333333333em; //24
+            right: -3em; //-54
+        }
+    }
+
     &__h2 {
         @extend %heading-2;
         @include h2-gradient(800);

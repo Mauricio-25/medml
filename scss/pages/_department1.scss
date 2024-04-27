@@ -7,4 +7,10 @@
         @extend %container;
         @include flex(0.5555555555555556em, column, center, center); //10
     }
+
+    &__background {
+        @extend %background;
+        left: -6em; //108
+        top: 15.166666666666666em; //273
+    }
 }

@@ -5,6 +5,12 @@
         @include flex(2.2222222222222223em, row, space-between, center); //40
     }
 
+    &__background {
+        @extend %background;
+        top: 10em; //180
+        left: 2.388888888888889em; //43
+    }
+
     &__col {
         @include flex(2.7777777777777777em, column, center, start); //50
         max-width: 475px;
