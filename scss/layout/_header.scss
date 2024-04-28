@@ -1,5 +1,7 @@
 
 .header {
+    position: relative;
+    z-index: 3;
     
     &__container {
         @extend %container;
@@ -53,6 +55,7 @@
     &__collapse {
         position: absolute;
         left: 50%;
+        z-index: 5;
         width: 2.5em; //45
         height: 0px;
         transition: 0.3s;

@@ -100,6 +100,27 @@ document.addEventListener("click", (event) => {
 });
 
 
+// ! CARRUSEL CUSTOMERS 1
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    let splide1 = new Splide( '.customers1 .splide', {
+      type   : 'loop',
+      perPage: 3,
+      focus  : 'start',
+      perMove: 3,
+      omitEnd: false,
+      classes: {
+        pagination: 'splide__pagination',
+        page      : 'splide__pagination__page',
+      },
+    } );
+    
+    splide1.mount();
+
+
+} );
+
+
 
 //! CARRUSEL CUSTOMERS 2
 
@@ -159,3 +180,23 @@ function removeHighlight() {
 }
 
 })
+
+
+// ! CARRUSEL OUR TEAM
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    let splide3 = new Splide( '.team .splide', {
+      type   : 'loop',
+      perPage: 3,
+      perMove: 3,
+      omitEnd: false,
+      classes: {
+        pagination: 'splide__pagination',
+        page      : 'splide__pagination__page',
+      },
+    } );
+    
+    splide3.mount();
+
+
+} );

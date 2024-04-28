@@ -1,6 +1,8 @@
 
 .impact {
 
+    background-color: $gray;
+    
     &__container {
         @extend %container;
         @include flex(3.111111111111111em, column, center, center); //56
