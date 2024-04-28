@@ -38,5 +38,15 @@
         &__img {
             max-width: 30.555555555555557em; //550
         }
+
+        &__p {
+            text-align: center;
+        }
+    }
+
+    @include mobile() {
+        &__p {
+            text-align: center;
+        }
     }
 }

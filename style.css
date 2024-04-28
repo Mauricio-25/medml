@@ -107,8 +107,6 @@ body {
   color: #FFFAFA;
   background-color: #090808;
   /* (Opcional) */
-  hyphens: auto;
-  /* (Opcional) */
   font-smooth: always;
   /* (Opcional) */
   -webkit-font-smoothing: antialiased;
@@ -1777,7 +1775,12 @@ body {
     display: flex;
     flex-direction: column; }
   .heroSection__img {
-    max-width: 30.555555555555557em; } }
+    max-width: 30.555555555555557em; }
+  .heroSection__p {
+    text-align: center; } }
+@media (width < 640px) {
+  .heroSection__p {
+    text-align: center; } }
 
 .choose__background {
   bottom: -41px;
