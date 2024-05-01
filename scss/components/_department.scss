@@ -83,7 +83,7 @@
     
     & .step {
         max-width: 580px; //580
-        @include grid(0, 3, 1, 1fr, auto, 1fr, auto);
+        @include grid(1em, 3, 1, 1fr, auto, 1fr, auto); //18
         height: 41.111111111111114em; //740
     }
 

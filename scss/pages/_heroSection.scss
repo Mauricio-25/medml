@@ -1,5 +1,8 @@
 
 .heroSection {
+
+    transition: 1.5s !important;
+
     &__container {
         @extend %container;
         @include flex(56px, column, center, center); //56

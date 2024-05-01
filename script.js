@@ -100,15 +100,17 @@ document.addEventListener("click", (event) => {
 });
 
 
-// ! CARRUSEL CUSTOMERS 1
+// ! CARRUSEL CUSTOMERS 1 
+
+let dragValue1 = window.innerWidth >= 1280 ? false : true;
 
 document.addEventListener( 'DOMContentLoaded', function() {
     let splide1 = new Splide( '.customers1 .splide', {
       type   : 'loop',
       perPage: 3,
-      focus  : 'start',
       perMove: 3,
       omitEnd: false,
+      drag: dragValue1,
       classes: {
         pagination: 'splide__pagination',
         page      : 'splide__pagination__page',
@@ -121,14 +123,63 @@ document.addEventListener( 'DOMContentLoaded', function() {
 } );
 
 
+// ! MODIFICAR EL EMENNTO SIGUIENTE Y ANTERIOR CUANDO SE HACE HOVER
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    let slides1 = document.querySelectorAll('.customers1 .splide__slide');
+    
+    slides1.forEach(function(slide) {
+        slide.addEventListener('mouseover', function() {
+            highlightSiblings1(this);
+        });
+    
+        slide.addEventListener('mouseout', function() {
+            removeHighlight1();
+        });
+    });
+    
+    function highlightSiblings1(element) {
+        let siblings = document.querySelectorAll('.customers1 .splide__slide');
+        let currentIndex = Array.prototype.indexOf.call(siblings, element);
+            
+        if (currentIndex > 0) {
+            siblings[currentIndex - 1].classList.add('highlight');
+        }
+            
+        if (currentIndex < siblings.length - 1) {
+            siblings[currentIndex + 1].classList.add('highlight');
+        }
+
+        if (currentIndex < siblings.length - 1) {
+            siblings[currentIndex - 2].classList.add('highlight');
+        }
+/*
+        if (currentIndex < siblings.length - 1) {
+            siblings[currentIndex + 2].classList.add('highlight');
+        }*/
+    }
+    
+    function removeHighlight1() {
+        let siblings = document.querySelectorAll('.customers1 .splide__slide');
+            
+        siblings.forEach(function(sibling) {
+            sibling.classList.remove('highlight');
+        });
+    }
+    
+    })
+
 
 //! CARRUSEL CUSTOMERS 2
+
+let dragValue2 = window.innerWidth >= 1280 ? false : true;
 
 document.addEventListener( 'DOMContentLoaded', function() {
     let splide2 = new Splide( '.customers2 .splide', {
       type   : 'loop',
       perPage: 3,
       perMove: 3,
+      drag: dragValue2,
       omitEnd: false,
       classes: {
         pagination: 'splide__pagination',
@@ -146,7 +197,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 // ! MODIFICAR EL EMENNTO SIGUIENTE Y ANTERIOR CUANDO SE HACE HOVER
 
 document.addEventListener( 'DOMContentLoaded', function() {
-const slides = document.querySelectorAll('.splide__slide');
+const slides = document.querySelectorAll('.customers2 .splide__slide');
 
 slides.forEach(function(slide) {
     slide.addEventListener('mouseover', function() {
@@ -159,7 +210,7 @@ slides.forEach(function(slide) {
 });
 
 function highlightSiblings(element) {
-    let siblings = document.querySelectorAll('.splide__slide');
+    let siblings = document.querySelectorAll('.customers2 .splide__slide');
     let currentIndex = Array.prototype.indexOf.call(siblings, element);
         
     if (currentIndex > 0) {
@@ -172,7 +223,7 @@ function highlightSiblings(element) {
 }
 
 function removeHighlight() {
-    let siblings = document.querySelectorAll('.splide__slide');
+    let siblings = document.querySelectorAll('.customers2 .splide__slide');
         
     siblings.forEach(function(sibling) {
         sibling.classList.remove('highlight');

@@ -38,6 +38,12 @@
     & .splide__list {
         gap: 1.3333333333333333em; //24
         align-items: end;
+
+        &:hover > :not(:hover) {
+            & .img {
+                opacity: 0.5;
+            }
+        }
     }
 
     & .splide__slide {
@@ -45,6 +51,7 @@
         
         &:nth-child(3n+2) .img {
             height: 26.833333333333332em; //483
+            opacity: 1;
         }
 
         &:hover {

@@ -1,4 +1,7 @@
 .hero {
+
+    transition: 1.5s !important;
+
     &__container {
         @extend %container;
         @include flex(0, row, center, center);
