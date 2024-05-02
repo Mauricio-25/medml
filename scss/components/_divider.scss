@@ -21,7 +21,6 @@
     & .button {
         @extend %button;
         background-color: $primary;
-        width: 11.666666666666666em; //210
     }
 
     @include desktop() {

@@ -61,7 +61,7 @@
         &__list {
             gap: 1.7777777777777777em; //32
             align-items: center;
-            min-height: 17.5em; //315
+            height: $height-card-hover-2; //200
 
             /*
             &:hover > :not(:hover) {
@@ -90,8 +90,8 @@
         }
 
         &__slide {
-            width: 14.61111111111111em !important; //263
-            min-height: 13.88888888888889em; //250
+            width: $width-card-2 !important; //263
+            height: $height-card-2; //140
             padding: 2.2222222222222223em 0.8888888888888888em; //40 16
             border: 1px solid $white;
             border-radius: 1.3333333333333333em; //24
@@ -99,8 +99,8 @@
             transition: 0.3s;
 
             &:nth-child(3n+2) {
-                width: 25.555555555555557em !important; //460
-                min-height: 17.5em; //315
+                width: $width-card-hover-2 !important; //460
+                height: $height-card-hover-2; //200
                 padding: 0.8888888888888888em 0.4444444444444444em; //16 8
 
                 .p {
@@ -119,8 +119,8 @@
             }
 
             &:hover {
-                width: 25.555555555555557em !important; //460
-                min-height: 17.5em; //315
+                width: $width-card-hover-2 !important; //460
+                height: $height-card-hover-2; //200
                 padding: 0.8888888888888888em 0.4444444444444444em; //16 8
 
                 .p {
@@ -155,8 +155,8 @@
     }
 
     & .highlight:nth-child(n) {
-        width: 14.61111111111111em !important; //263
-        min-height: 13.88888888888889em; //250
+        width: $width-card-2 !important; //263
+        height: $height-card-2; //140
         padding: 2.2222222222222223em 0.8888888888888888em; //40 16
     
         .p {
@@ -182,19 +182,25 @@
     @include desktop() {
         
         & .splide {
-            width: 25.555555555555557em !important; //460
+            width: $cus2-calculated-width-desktop !important; //263
+
+            &__list {
+                height: auto;
+            }
 
             &__slide {
-                width: 25.555555555555557em !important; //460
-
+                width: $width-card-2 !important; //263
+                height: auto;
 
                 &:nth-child(3n+2) {
-                    width: 25.555555555555557em !important; //460
+                    width: $width-card-2 !important; //263
+                    height: auto;
                 }
 
                 &:hover {
-                    width: 25.555555555555557em !important; //460
+                    width: $width-card-2 !important; //263
                     padding: 2.2222222222222223em 0.8888888888888888em; //40 16
+                    height: auto;
     
                     .p {
                         font-size: 14px; //14
@@ -230,7 +236,7 @@
         }
 
         & .highlight:nth-child(n) {
-            width: 25.555555555555557em !important; //460
+            width: $width-card-2 !important; //263
             padding: 2.2222222222222223em 0.8888888888888888em; //40 16
         
             .p {
@@ -251,7 +257,7 @@
 
     @include mobile() {
         & .splide {
-            width: 13.88888888888889em !important; //250
+            width: $calculated-width-mobile !important; //250
 
             &__slide {
                 width: 13.88888888888889em !important; //250
@@ -263,7 +269,7 @@
                 }
 
                 &:hover {
-                    width: 13.88888888888889em !important; //460
+                    width: 13.88888888888889em !important; //250
                     padding: 0.8888888888888888em 0.4444444444444444em; //16 8
                 }
 

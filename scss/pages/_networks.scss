@@ -30,6 +30,11 @@
             bottom: 14.166666666666666em; //255
             right: 15.555555555555555em; //280
         }
+        &--5 {
+            @extend %background;
+            top: 16em; //
+            right: 26em; //
+        }
     }
 
     &__title {
@@ -121,6 +126,7 @@
 
     @include mobile() {
         &__picture {
+            display: none;
             height: 100%;
         }
 

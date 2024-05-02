@@ -109,6 +109,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
       type   : 'loop',
       perPage: 3,
       perMove: 3,
+      autoplay   : true,
+      interval   : 5000, // 5 segundos en milisegundos
       omitEnd: false,
       drag: dragValue1,
       classes: {
@@ -179,6 +181,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
       type   : 'loop',
       perPage: 3,
       perMove: 3,
+      autoplay   : true,
+      interval   : 5000, // 5 segundos en milisegundos
       drag: dragValue2,
       omitEnd: false,
       classes: {
@@ -240,6 +244,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
       type   : 'loop',
       perPage: 3,
       perMove: 3,
+      autoplay   : true,
+      interval   : 5000, // 5 segundos en milisegundos
       omitEnd: false,
       classes: {
         pagination: 'splide__pagination',

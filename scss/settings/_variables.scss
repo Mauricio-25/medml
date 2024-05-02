@@ -15,3 +15,29 @@ $heading1-mobile: 42px;
 
 $heading2: 42px;
 $heading2-mobile: 32px;
+
+
+// customers 1
+$width-card: 10.666666666666666em; //192
+$height-card: 14.333333333333334em; //258
+$height-card-mediano: 18.5em; //320
+$width-card-hover: 21.11111111111111em; //380
+$height-card-hover: 28.22222222222222em; //508
+
+$cus1-calculated-width-desktop: calc(#{$width-card} * 2 + #{$width-card}*0.85);
+
+// customers 2
+$width-card-2: 14.61111111111111em; //263
+$height-card-2: 7.777777777777778em; //140
+$width-card-hover-2: 25.555555555555557em; //460
+$height-card-hover-2: 11.11111111111111em; //200
+
+$cus2-calculated-width-desktop: calc(#{$width-card-2} + #{$width-card-2}*0.25);
+
+// Team
+$width-card-3: 21.11111111111111em; //380
+$height-card-3: 20.555555555555557em; //370
+$height-card-hover-3: 26.833333333333332em; //483
+
+$team-calculated-width-desktop: calc(#{$width-card-3} + #{$width-card-3}*0.25); // Calculamos el ancho
+$calculated-width-mobile: calc(13.88888888888889em + 13.88888888888889em*0.25); //250

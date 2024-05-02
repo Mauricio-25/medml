@@ -25,6 +25,12 @@
     &__block {
         margin-top: 1.8888888888888888em; //34
         @include flex(20px, column, center, start); //20
+
+        &--2 {
+            margin-top: 1.8888888888888888em; //34
+            @include flex(20px, column, center, start); //20
+            display: none;
+        }
     }
 
     &__b {
@@ -92,8 +98,11 @@
 
 
         &__block {
-            align-items: center;
-            text-align: center;
+            display: none;
+
+            &--2 {
+                display: flex;
+            }
         }
     }
 }
