@@ -82,17 +82,25 @@
     }
 
     &__img {
-        opacity: 0.4;
-        transform: scaleX(-1) translateY(-50%);
+        
+        opacity: 0.25;
+        transform: translateY(-50%);
 
         max-width: unset;
-        width: auto;
-        height: 60%;
         object-fit: cover;
 
         position: absolute;
         right: 0;
         top: 50%;
+
+        &--world {
+            transform: rotate(-90deg);
+            opacity: .10;
+
+            left: 0;
+            top: unset;
+            bottom: 0;
+        }
 
     }
 
@@ -106,6 +114,7 @@
         }
 
         &__picture {
+            display: none;
             position: absolute;
             z-index: 1;
         }

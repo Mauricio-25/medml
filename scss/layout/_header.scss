@@ -1,7 +1,15 @@
 
+body {
+    padding-top: 5.277777777777778em; //95
+}
+
 .header {
-    position: relative;
-    z-index: 3;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color: $black, $alpha: 0.5);
     
     &__container {
         @extend %container;
@@ -97,12 +105,25 @@
     }
 
     @include tablet() {
-        &__container {
-            justify-content: center;
-        }
         
-        &__div {
+        &__nav, &__block {
             display: none;
+        }
+
+        &__flags {
+            width: 2.2222222222222223em; //40
+        }
+
+        &__arrow {
+            width: 1.6666666666666667em; //30
+        }
+
+        &__collapse {
+            width: 3em; //54
+
+            &--open {
+                height: 5.555555555555555em; //100
+            }
         }
     }
 }

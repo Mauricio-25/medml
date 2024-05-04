@@ -1,0 +1,73 @@
+
+.message {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    @include flex(0, row, center, center);
+    display: none;
+
+    &__container {
+        @include flex(0, row, center, center);
+
+        width: 29.88888888888889em; //538
+        padding: 4.444444444444445em 6.666666666666667em; //80 120
+        border-radius: 1.3333333333333333em; //24
+        background-color: $black;
+        box-shadow: 0 0 15px $grayLight; //15
+        transition: 0.3s;
+
+        position: absolute;
+        top: 0;
+        transform: translateY(-110%);
+
+        &--active {
+            transform: translateY(0%);
+            top: unset;
+        }
+    }
+
+    &__content {
+        @include flex(6px, column, center, center); //6
+    }
+
+    &__b {
+        font-size: 1.3333333333333333em; //24
+        font-weight: 700;
+        text-align: center;
+        margin-top: 0.4444444444444444em; //8
+    }
+
+    &__p {
+        font-size: 1em; //18
+        font-weight: 600;
+        text-align: center;
+        color: $grayLight;
+    }
+
+    &__button {
+        @extend %button;
+        width: 100%;
+        background: $gradient-primary;
+        margin-top: 1em; //18
+    }
+
+    &__check {
+        width: 116px;
+    }
+
+    &__equis {
+        width: 1.1111111111111112em; //20
+        position: absolute;
+        right: 1.6111111111111112em; //29
+        top: 1.7222222222222223em; //31
+        cursor: pointer;
+    }
+
+    &--active {
+        display: flex;
+    }
+}

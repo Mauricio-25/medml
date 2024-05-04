@@ -9,6 +9,7 @@
     cursor: pointer;
     transition: 0.3s;
     background: $primary;
+    @include flex(0, row, center, center);
 
     &:hover {
         opacity: .8;
