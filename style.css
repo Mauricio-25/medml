@@ -147,7 +147,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
-.shareholders__h2, .careers__h2, .heroSection__h2, .team__h2, .customers2 .h2, .customers1__h2, .impact__h2, .discover__h2, .revolutionize__h2, .why__h2, .networks__h2, .map__h2, .needUs__h2, .imagine__h2, .networkTeam .h2, .adjudicator .h2, .underwriters .h2, .keyFeatures .h2, .choose .h2, .mission .h2, .department4 .h3, .department3 .h3, .department2 .h3, .department1 .h3, .department4 .h2, .department3 .h2, .department2 .h2, .department1 .h2 {
+.shareholders__h2, .careers__h2, .heroSection__h2, .video__h2, .team__h2, .customers2 .h2, .customers1__h2, .impact__h2, .discover__h2, .revolutionize__h2, .why__h2, .networks__h2, .map__h2, .needUs__h2, .imagine__h2, .networkTeam .h2, .adjudicator .h2, .underwriters .h2, .keyFeatures .h2, .choose .h2, .mission .h2, .department4 .h3, .department3 .h3, .department2 .h3, .department1 .h3, .department4 .h2, .department3 .h2, .department2 .h2, .department1 .h2 {
   font-size: clamp(32px, 0.0111607143 * (100vw - 640px) + 32px, 42px);
   font-weight: 700;
   text-align: center;
@@ -173,7 +173,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.8;
 }
 
-.shareholders__container, .careers__container, .heroSection__container, .contact__container, .team__container, .comment__container, .customers2 .container, .customers1__container, .impact__container, .discover__container, .department4__container, .department3__container, .department2__container, .department1__container, .revolutionize__container, .why__container, .networks__container, .map__container, .needUs__container, .imagine__container, .footer__container, .hero__container, .header__container, .networkTeam .container, .adjudicator .container, .underwriters .container, .keyFeatures .container, .choose .container, .mission .container, .dividerHome .container, .dividerSection--2 .container, .dividerSection .container {
+.shareholders__container, .careers__container, .heroSection__container, .video__container, .contact__container, .team__container, .comment__container, .customers2 .container, .customers1__container, .impact__container, .discover__container, .department4__container, .department3__container, .department2__container, .department1__container, .revolutionize__container, .why__container, .networks__container, .map__container, .needUs__container, .imagine__container, .footer__container, .hero__container, .header__container, .networkTeam .container, .adjudicator .container, .underwriters .container, .keyFeatures .container, .choose .container, .mission .container, .dividerHome .container, .dividerSection--2 .container, .dividerSection .container {
   position: relative;
   z-index: 2;
   margin-left: auto;
@@ -726,7 +726,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.shareholders__background--2, .shareholders__background, .careers__background--2, .careers__background, .underwriters__background, .keyFeatures__background--2, .keyFeatures__background, .choose__background, .heroSection__background--2, .heroSection__background, .comment__background, .customers2__background--2, .customers2__background, .customers1__background, .discover__background, .department4__background, .department3__background, .department2__background, .department1__background, .why__background, .networks__background--5, .networks__background--4, .networks__background--3, .networks__background--2, .networks__background, .map__background, .hero__background--2, .hero__background {
+.shareholders__background--2, .shareholders__background, .careers__background--2, .careers__background, .underwriters__background, .keyFeatures__background--2, .keyFeatures__background, .choose__background, .heroSection__background--2, .heroSection__background, .video__background, .comment__background, .customers2__background--2, .customers2__background, .customers1__background, .discover__background, .department4__background, .department3__background, .department2__background, .department1__background, .why__background, .networks__background--5, .networks__background--4, .networks__background--3, .networks__background--2, .networks__background, .map__background, .hero__background--2, .hero__background {
   border-radius: 50%;
   background-color: #cc5a5a;
   width: clamp(150px, 0.1149553571 * (100vw - 640px) + 150px, 253px);
@@ -1338,9 +1338,10 @@ body {
 .networks__img--world {
   transform: rotate(-90deg);
   opacity: 0.1;
-  left: 0;
+  left: -40%;
   top: unset;
-  bottom: 0;
+  bottom: 45%;
+  width: 66.6666666667em;
 }
 @media (width < 1024px) {
   .networks__div {
@@ -2437,6 +2438,40 @@ body {
   .contact__block--2 {
     display: flex;
   }
+}
+
+.video {
+  background-color: #141414;
+}
+.video__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.video__h2 {
+  background-image: linear-gradient(90deg, rgb(191, 49, 49) 0%, rgb(105, 46, 46) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+.video__p {
+  font-weight: 700;
+  font-size: 1.1111111111em;
+  text-align: center;
+}
+.video__video {
+  margin-top: 0.7777777778em;
+  width: 100%;
+  max-width: 44.4444444444em;
+  height: 22em;
+  background-color: #8E8E8E;
+  border-radius: 1.3333333333em;
+}
+.video__background {
+  bottom: 11.5em;
+  left: -6.7222222222em;
 }
 
 .heroSection {

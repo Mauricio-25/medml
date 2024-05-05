@@ -1,0 +1,35 @@
+
+.video {
+    background-color: $gray;
+
+    &__container {
+        @extend %container;
+        @include flex(1em, column, center, center); //18
+    }
+
+    &__h2 {
+        @extend %heading-2;
+        @include h2-gradient(800);
+    }
+
+    &__p {
+        font-weight: 700;
+        font-size: 1.1111111111111112em; //20
+        text-align: center;
+    }
+
+    &__video {
+        margin-top: 0.7777777777777778em; //14
+        width: 100%;
+        max-width: 44.44444444444444em; //800
+        height: 22em; //396
+        background-color: $grayLight;
+        border-radius: 1.3333333333333333em; //24
+    }
+
+    &__background {
+        @extend %background;
+        bottom: 11.5em; //207
+        left: -6.722222222222222em; //121
+    }
+}
