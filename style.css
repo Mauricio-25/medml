@@ -847,16 +847,10 @@ body {
     display: none;
   }
   .header__flags {
-    width: 2.2222222222em;
-  }
-  .header__arrow {
     width: 1.6666666667em;
   }
-  .header__collapse {
-    width: 3em;
-  }
   .header__collapse--open {
-    height: 5.5555555556em;
+    height: 84px;
   }
 }
 
