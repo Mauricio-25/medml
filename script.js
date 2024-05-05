@@ -257,3 +257,86 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 
 } );
+
+
+// !  Abrir popup
+
+document.addEventListener( 'DOMContentLoaded', function() {
+    const commentButton = document.querySelector(".comment__button");
+    const contactButton = document.querySelector(".contact__button");
+
+    const equisComment = document.querySelector("#mesComment .message__equis");
+    const buttonComment = document.querySelector("#mesComment .message__button");
+
+    const equisContact = document.querySelector("#mesContact .message__equis");
+    const buttonContact = document.querySelector("#mesContact .message__button");
+
+    if(commentButton) {
+        commentButton.addEventListener("click", ()=>{
+            abrirPopUpComment();
+        })
+    }
+
+    if(contactButton) {
+        contactButton.addEventListener("click", ()=>{
+            abrirPopUpContact();
+        })
+    }
+
+    if(equisComment && buttonComment) {
+        equisComment.addEventListener("click", ()=>{
+            cerrarPopUpComment();
+        })
+
+        buttonComment.addEventListener("click", ()=>{
+            cerrarPopUpComment();
+        })
+    }
+
+    if(equisContact && buttonContact) {
+        equisContact.addEventListener("click", ()=>{
+            cerrarPopUpContact();
+        })
+
+        buttonContact.addEventListener("click", ()=>{
+            cerrarPopUpContact();
+        })
+    }
+})
+
+function abrirPopUpComment() {
+    let mesComment = document.querySelector("#mesComment");
+
+    mesComment.style.display = "flex";
+    setTimeout(()=>{
+        mesComment.classList.add("message--active");
+    }, 100)
+}
+
+function cerrarPopUpComment() {
+    let mesComment = document.querySelector("#mesComment");
+
+    mesComment.classList.remove("message--active");
+    setTimeout(()=>{
+        mesComment.style.display = "none";
+    }, 300)
+}
+
+
+function abrirPopUpContact() {
+    let mesContact = document.querySelector("#mesContact");
+
+    mesContact.style.display = "flex";
+    setTimeout(()=>{
+        mesContact.classList.add("message--active");
+    }, 100)
+}
+
+function cerrarPopUpContact() {
+    let mesContact = document.querySelector("#mesContact");
+
+    mesContact.classList.remove("message--active");
+    setTimeout(()=>{
+        mesContact.style.display = "none";
+    }, 300)
+}
