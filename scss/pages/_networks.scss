@@ -83,7 +83,7 @@
 
     &__img {
         
-        opacity: 0.25;
+        opacity: 0.5;
         transform: translateY(-50%);
 
         max-width: unset;
@@ -92,15 +92,18 @@
         position: absolute;
         right: 0;
         top: 50%;
+        width: 90%;
+        z-index: 1;
 
         &--world {
             transform: rotate(-90deg);
-            opacity: .10;
+            opacity: .05;
 
-            left: -40%;
+            left: -35%;
             top: unset;
             bottom: 45%;
-            width: 66.66666666666667em; //1200
+            width: 45em; //
+            z-index: 2;
         }
 
     }

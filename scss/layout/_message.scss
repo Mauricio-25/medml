@@ -13,7 +13,8 @@
     &__container {
         @include flex(0, row, center, center);
 
-        width: 29.88888888888889em; //538
+        width: 80%;
+        max-width: 29.88888888888889em; //538
         padding: 4.444444444444445em 6.666666666666667em; //80 120
         border-radius: 1.3333333333333333em; //24
         background-color: $black;

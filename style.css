@@ -936,7 +936,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 29.8888888889em;
+  width: 80%;
+  max-width: 29.8888888889em;
   padding: 4.4444444444em 6.6666666667em;
   border-radius: 1.3333333333em;
   background-color: #090808;
@@ -1321,21 +1322,24 @@ body {
   position: relative;
 }
 .networks__img {
-  opacity: 0.25;
+  opacity: 0.5;
   transform: translateY(-50%);
   max-width: unset;
   object-fit: cover;
   position: absolute;
   right: 0;
   top: 50%;
+  width: 90%;
+  z-index: 1;
 }
 .networks__img--world {
   transform: rotate(-90deg);
-  opacity: 0.1;
-  left: -40%;
+  opacity: 0.05;
+  left: -35%;
   top: unset;
   bottom: 45%;
-  width: 66.6666666667em;
+  width: 45em;
+  z-index: 2;
 }
 @media (width < 1024px) {
   .networks__div {
