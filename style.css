@@ -728,7 +728,7 @@ body::-webkit-scrollbar-thumb {
 
 .shareholders__background--2, .shareholders__background, .careers__background--2, .careers__background, .underwriters__background, .keyFeatures__background--2, .keyFeatures__background, .choose__background, .heroSection__background--2, .heroSection__background, .video__background, .comment__background, .customers2__background--2, .customers2__background, .customers1__background, .discover__background, .department4__background, .department3__background, .department2__background, .department1__background, .why__background, .networks__background--5, .networks__background--4, .networks__background--3, .networks__background--2, .networks__background, .map__background, .hero__background--2, .hero__background {
   border-radius: 50%;
-  background-color: #cc5a5a;
+  background-color: #7d0909;
   width: clamp(150px, 0.1149553571 * (100vw - 640px) + 150px, 253px);
   height: clamp(150px, 0.1149553571 * (100vw - 640px) + 150px, 253px);
   filter: blur(8em);
