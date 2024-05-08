@@ -1318,7 +1318,6 @@ body {
 .networks__picture {
   object-fit: cover;
   height: 38.8888888889em;
-  overflow: hidden;
   position: relative;
 }
 .networks__img {
@@ -1327,15 +1326,25 @@ body {
   max-width: unset;
   object-fit: cover;
   position: absolute;
+}
+.networks__img--1 {
   right: 0;
   top: 50%;
-  width: 90%;
+  width: 553px;
+  height: 597px;
   z-index: 1;
 }
+.networks__img--2 {
+  width: 338px;
+  height: 475px;
+  left: -66px;
+  top: 290px;
+  object-fit: contain;
+}
 .networks__img--world {
-  transform: rotate(-90deg);
-  opacity: 0.05;
-  left: -35%;
+  transform: rotate(227deg);
+  opacity: 0.03;
+  left: -60%;
   top: unset;
   bottom: 45%;
   width: 45em;
