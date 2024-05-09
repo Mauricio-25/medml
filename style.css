@@ -1298,6 +1298,8 @@ body {
   justify-content: center;
   align-items: start;
   gap: 3.1111111111em;
+  position: relative;
+  z-index: 3;
 }
 .networks__ul {
   display: flex;
@@ -1337,7 +1339,7 @@ body {
 .networks__img--2 {
   width: 338px;
   height: 475px;
-  left: -66px;
+  right: 400px;
   top: 290px;
   object-fit: contain;
 }

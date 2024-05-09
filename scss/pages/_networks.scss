@@ -54,6 +54,8 @@
 
     &__div {
         @include flex(3.111111111111111em, column, center, start); //56
+        position: relative;
+        z-index: 3;
     }
 
     &__ul {
@@ -102,7 +104,7 @@
         &--2 {
             width: 338px;
             height: 475px;
-            left: -66px;
+            right: 400px;
             top: 290px;
             object-fit: contain;
         }
