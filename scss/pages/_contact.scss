@@ -29,7 +29,7 @@
         &--2 {
             margin-top: 1.8888888888888888em; //34
             @include flex(20px, column, center, start); //20
-            display: none;
+            @include display(none);
         }
     }
 
@@ -38,7 +38,7 @@
     }
 
     &__a {
-        transition: 0.3s;
+        @include transition(0.3s);
 
         &:hover {
             color: $tertiary
@@ -65,7 +65,7 @@
         padding: 0.7142857142857143em; //10
         resize: none;
         border-radius: 0.5714285714285714em; //8
-        transition: 0.3s;
+        @include transition(0.3s);
         color: $grayLight;
 
         &:focus {
@@ -76,7 +76,7 @@
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
         width: 100%;
     }
 
@@ -88,20 +88,20 @@
         }
 
         &__div {
-            align-items: center;
+            @include align-items(center);
             text-align: center;
         }
 
         &__circle {
-            transform: rotate(90deg);
+            @include transform(rotate(90deg));
         }
 
 
         &__block {
-            display: none;
+            @include display(none);
 
             &--2 {
-                display: flex;
+                @include display(flex);
             }
         }
     }

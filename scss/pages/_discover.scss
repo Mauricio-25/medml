@@ -27,7 +27,7 @@
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
     }
 
     &__block {
@@ -44,25 +44,25 @@
         width: 17.5em; //315
         height: 13.88888888888889em; //250
         text-align: start;
-        align-items: end;
-        transition: 0.4s;
+        @include align-items(end);
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
 
         & .div {
-            align-items: start;
+            @include align-items(start);
         }
     }
 
     @include desktop() {
         &__container {
-            flex-direction: column;
+            @include flex-direction(column);
         }
 
         &__col {
-            align-items: center;
+            @include align-items(center);
             text-align: center;
         }
 

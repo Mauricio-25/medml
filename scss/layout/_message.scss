@@ -8,7 +8,7 @@
     left: 0;
     z-index: 15;
     @include flex(0, row, center, center);
-    display: none;
+    @include display(none);
 
     &__container {
         @include flex(0, row, center, center);
@@ -18,8 +18,8 @@
         padding: 4.444444444444445em 6.666666666666667em; //80 120
         border-radius: 1.3333333333333333em; //24
         background-color: $black;
-        box-shadow: 0 0 15px $grayLight; //15
-        transition: 0.3s;
+        @include box-shadow(0 0 15px $grayLight); //15
+        @include transition(0.3s);
 
         position: absolute;
         opacity: 0;

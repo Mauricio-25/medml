@@ -31,7 +31,7 @@ body {
 
     &__a {
         font-weight: 700;
-        transition: 0.3s;
+        @include transition(0.3s);
 
         &:hover {
             color: $primary;
@@ -66,9 +66,9 @@ body {
         z-index: 5;
         width: 2.5em; //45
         height: 0px;
-        transition: 0.3s;
+        @include transition(0.3s);
         overflow: hidden;
-        transform: translateY(8px) translateX(-50%);
+        @include transform(translateY(8px) translateX(-50%));
 
         &--open {
             height: 4em; //72
@@ -93,7 +93,7 @@ body {
         padding: 0.3333333333333333em 0.4444444444444444em; //6 8
         @include flex(0, row, center, center);
         opacity: 0.5;
-        transition: 0.3s;
+        @include transition(0.3s);
 
         &:hover {
             opacity: 1;
@@ -107,7 +107,7 @@ body {
     @include tablet() {
         
         &__nav, &__block {
-            display: none;
+            @include display(none);
         }
 
         &__flags {

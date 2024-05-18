@@ -28,8 +28,8 @@
         text-align: center;
 
         & .div {
-            flex-direction: column-reverse;
-            justify-content: center;
+            @include flex-direction(column-reverse);
+            @include justify-content(center);
         } 
         
     }

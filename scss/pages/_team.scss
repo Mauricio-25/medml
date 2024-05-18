@@ -1,6 +1,6 @@
 
 .team {
-    background: $gradient-primary;
+    @include background-linear-gradient();
 
     &__container {
         @extend %container;
@@ -21,7 +21,7 @@
 
     & .img {
         opacity: 0.5;
-        transition: 0.3s;
+        @include transition(0.3s);
         height: $height-card-3; //370
         border-radius: 0.6666666666666666em; //12
     }
@@ -37,7 +37,7 @@
 
     & .splide__list {
         gap: 1.3333333333333333em; //24
-        align-items: end;
+        @include align-items(end);
 
         &:hover > :not(:hover) {
             & .img {
@@ -62,7 +62,7 @@
     }
 
     & .splide__arrow {
-        display: none;
+        @include display(none);
     }
 
     // ! Queries

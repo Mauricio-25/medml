@@ -37,10 +37,10 @@
 
     &__li {
         @extend %verticalCard;
-        transition: 0.4s;
+        @include transition(0.4s);
 
         &:hover {
-            transform: translateY(-10%) !important;
+            @include transform(translateY(-10%) !important);
         }
 
         &:nth-child(odd) {
@@ -50,7 +50,7 @@
 
     @include laptop() {
         &__ul {
-            flex-wrap: wrap;
+            @include flex-wrap(wrap);
         }
 
         &__li {

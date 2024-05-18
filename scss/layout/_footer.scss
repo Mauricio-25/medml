@@ -1,6 +1,6 @@
 
 .footer {
-    background: $gradient-primary;
+    @include background-linear-gradient();
     
     &__container {
         @extend %container;
@@ -38,8 +38,8 @@
     &__a {
         font-size: 0.8888888888888888em; //16
         border-bottom: 1px solid transparent;
-        transition: 0.3s;
-
+        @include transition(0.3s);
+        
         &:hover {
             color: $grayLight;
         }
@@ -79,7 +79,7 @@
             &:nth-child(1) {
                 grid-column: span 2;
                 text-align: center;
-                align-items: center;
+                @include align-items(center);
             }
         }
     }
@@ -91,7 +91,7 @@
         }
 
         &__col {
-            align-items: center;
+            @include align-items(center);
 
             &:nth-child(1) {
                 grid-column: unset;
@@ -99,7 +99,7 @@
         }
 
         &__ul {
-            align-items: center;
+            @include align-items(center);
         }
     }
 

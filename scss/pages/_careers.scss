@@ -1,7 +1,7 @@
 
 .careers {
 
-    transition: 1.5s !important;
+    @include transition(1.5s !important);
 
     &__container {
         @extend %container;
@@ -43,14 +43,14 @@
     &__circle {
         @include circle( size(60px,90px) ); 
         background-color: $tertiary;
-        transition: 0.4s !important;
+        @include transition(0.4s !important);
 
         &:nth-child(2) {
             margin-bottom: size(40px, 62px); //62
         }
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
@@ -68,7 +68,7 @@
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
     }
 
     // ! QUERIES

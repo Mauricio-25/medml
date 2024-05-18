@@ -1,7 +1,7 @@
 
 .imagine {
     
-    background: $gradient-primary;
+    @include background-linear-gradient();
 
     &__container {
         @extend %container;
@@ -14,7 +14,7 @@
 
     &__div {
         @include flex(0, row, space-between, start); //56
-        flex-wrap: wrap;
+        @include flex-wrap(wrap);
         width: 100%;
         padding: 0 size(40px, 100px); //100
     }
@@ -22,16 +22,16 @@
     &__simpleCard {
         @extend %simpleCard;
         width: 11.11111111111111em; //200
-        transition: 0.4s;
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
     @include desktop() {
         &__div {
-            justify-content: center;
+            @include justify-content(center);
             gap: 3.888888888888889em;//70
         }
     }

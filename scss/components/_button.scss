@@ -5,9 +5,9 @@
     color: $white;
     border-radius: 1.3333333333333333em; //24
     font-weight: 700;
-    box-shadow: $shadow-btn;
+    @include box-shadow($shadow-btn);
     cursor: pointer;
-    transition: 0.3s;
+    @include transition(0.3s);
     background: $primary;
     @include flex(0, row, center, center);
 

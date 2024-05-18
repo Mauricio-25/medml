@@ -2,11 +2,11 @@
 // ! Coloca la propiedad flex
 
 @mixin flex($gap, $direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    gap: $gap;
+  @include display(flex);
+  @include flex-direction($direction);
+  @include justify-content($justify);
+  @include align-items($align);
+  gap: $gap;
 }
 
 // ! Coloca la propiedad grid
@@ -18,7 +18,7 @@
   $templateColumn: ();
   $templateRow: ();
     
-  display: grid;
+  @include display(grid);
   gap: $gap;
   
   // Hacer algo con el resto de los argumentos
@@ -45,7 +45,7 @@
 }
 
 @mixin h2-gradient($weight) {
-  background-image: $gradient-primary;
+  @include background-image-linear-gradient();
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: $weight;
@@ -57,6 +57,107 @@
   border-radius: 50%;
   @include flex(0, row, center, center);
   border: 1px solid $tertiary;
+}
+
+// Adaptarlo a todos los navegadores
+
+@mixin transition($valor) {
+  -webkit-transition: $valor; /* Safari y Chrome */
+  -moz-transition: $valor;    /* Firefox */
+  -o-transition: $valor;      /* Opera */
+  -ms-transition: $valor;     /* Internet Explorer y Microsoft Edge */
+  transition: $valor;
+}
+
+@mixin transform($valor) {
+  -webkit-transform: $valor;
+  -moz-transform: $valor;
+  -o-transform: $valor;
+  -ms-transform: $valor;
+  transform: $valor;
+}
+
+@mixin box-shadow($valor) {
+  -webkit-box-shadow: $valor;
+  -moz-box-shadow: $valor;
+  -o-box-shadow: $valor;
+  -ms-box-shadow: $valor;
+  box-shadow: $valor;
+}
+
+@mixin display($valor) {
+  -webkit-display: $valor;
+  -moz-display: $valor;
+  -o-display: $valor;
+  -ms-display: $valor;
+  display: $valor;
+}
+
+@mixin flex-direction($valor) {
+  -webkit-flex-direction: $valor;
+  -moz-flex-direction: $valor;
+  -o-flex-direction: $valor;
+  -ms-flex-direction: $valor;
+  flex-direction: $valor;
+}
+
+@mixin flex-wrap($valor) {
+  -webkit-flex-wrap: $valor;
+  -moz-flex-wrap: $valor;
+  -o-flex-wrap: $valor;
+  -ms-flex-wrap: $valor;
+  flex-wrap: $valor;
+}
+
+@mixin justify-content($valor) {
+  -webkit-justify-content: $valor;
+  -moz-justify-content: $valor;
+  -o-justify-content: $valor;
+  -ms-justify-content: $valor;
+  justify-content: $valor;
+}
+
+@mixin align-items($valor) {
+  -webkit-align-items: $valor;
+  -moz-align-items: $valor;
+  -o-align-items: $valor;
+  -ms-align-items: $valor;
+  align-items: $valor;
+}
+
+@mixin align-self($valor) {
+  -webkit-align-self: $valor;
+  -moz-align-self: $valor;
+  -o-align-self: $valor;
+  -ms-align-self: $valor;
+  align-self: $valor;
+}
+
+@mixin background-linear-gradient() {
+  background: rgba(191,49,49,1);
+  background: -webkit-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -o-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -ms-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+}
+
+@mixin background-linear-gradient-vertical() {
+  background: rgba(191,49,49,1);
+  background: -webkit-linear-gradient(180deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -o-linear-gradient(180deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: -ms-linear-gradient(180deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background: linear-gradient(180deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+}
+
+@mixin background-image-linear-gradient() {
+  background-image: rgba(191,49,49,1);
+  background-image: -webkit-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background-image: -moz-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background-image: -o-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background-image: -ms-linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
+  background-image: linear-gradient(90deg, rgba(191,49,49,1) 0%, rgba(105,46,46,1) 100%);
 }
 
 // ! MEDIA QUERIES

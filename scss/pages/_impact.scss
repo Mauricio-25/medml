@@ -15,10 +15,10 @@
 
     &__circle {
         @include circle(3.888888888888889em); //70
-        transition: 0.3s;
+        @include transition(0.3s);
 
         &:hover {
-            transform: scale(1.1);
+            @include transform(scale(1.1));
         }
     }
 
@@ -52,12 +52,12 @@
 
     @include tablet() {
         &__div {
-            flex-direction: column;
+            @include flex-direction(column);
         }
 
         &__col2 {
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
         }
     }
 }

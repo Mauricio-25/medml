@@ -100,17 +100,17 @@
         }
 
         &--responsive {
-            display: none
+            @include display(none);
         }
     }
 
     & .li {
         @include flex(0.2222222222222222em, column, center, center); //4
         text-align: center;
-        transition: 0.3s;
+        @include transition(0.3s);
 
         &:hover {
-            transform: scale(1.1);
+            @include transform(scale(1.1));
         }
     }
 
@@ -132,7 +132,7 @@
     & .bar {
         width: 0.8333333333333334em; //15
         height: 100%;
-        background: $gradient-primary-vertical;
+        @include background-linear-gradient-vertical();
         border-radius: 1.3333333333333333em; //24
     }
 
@@ -158,11 +158,11 @@
         max-width: 12.777777777777779em; //230
         @extend %simpleCard;
         width: 100%;
-        align-self: flex-start;
-        transition: 0.4s;
+        @include align-self(flex-start);
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
@@ -199,7 +199,7 @@
         }
 
         & .graphic, & .col1, & .col2 {
-            flex-direction: column;
+            @include flex-direction(column);
         }
 
         & .col1 {
@@ -207,14 +207,14 @@
         }
 
         & .block {
-            flex-direction: row;
+            @include flex-direction(row);
         }
 
         & .line {
-            transform: rotate(90deg);
+            @include transform(rotate(90deg));
 
             &--2, &--3 {
-                transform: rotate(90deg);
+                @include transform(rotate(90deg));
             }
         }
 
@@ -224,8 +224,8 @@
 
         & .step {
             height: auto;
-            display: flex;
-            flex-direction: row-reverse;
+            @include display(flex);
+            @include flex-direction(row-reverse);
             gap: 10px; //10
         }
 
@@ -234,10 +234,10 @@
         }
 
         & .ul {
-            display: none;
+            @include display(none);
     
             &--2 {
-                display: none;
+                @include display(none);
             }
     
             &--responsive {
@@ -247,12 +247,12 @@
 
         & .li {
             max-width: 15.555555555555555em; //280
-            align-items: end;
+            @include align-items(end);
             text-align: end;
         }
 
         & .block {
-            flex-direction: column;
+            @include flex-direction(column);
         }
 
         & .line {

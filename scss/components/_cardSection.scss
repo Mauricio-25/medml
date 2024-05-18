@@ -25,7 +25,7 @@
     & .ul {
         max-width: 55.77777777777778em; //1004
         @include flex(0, row, center, start); //64
-        flex-wrap: wrap;
+        @include flex-wrap(wrap);
         row-gap: 3.5555555555555554em; //64
         column-gap: 7.555555555555555em; //136
     }
@@ -35,11 +35,11 @@
         width: 13.555555555555555em; //244
         min-height: 10.11111111111111em; //182
         gap: 0.8888888888888888em; //16
-        justify-content: start;
-        transition: 0.3s;
+        @include justify-content(start);
+        @include transition(0.3s);
 
         &:hover {
-            transform: scale(1.1);
+            @include transform(scale(1.1));
         }
     }
 
@@ -53,7 +53,7 @@
         width: auto;
 
         &--left {
-            transform: rotate(90deg);
+            @include transform(rotate(90deg));
         }
     }
 

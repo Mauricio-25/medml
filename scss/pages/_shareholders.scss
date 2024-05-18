@@ -40,18 +40,18 @@
         row-gap: 2.388888888888889em; //43
         column-gap: 1.3333333333333333em; //24
         max-width: 57.888888888888886em; //1042
-        flex-wrap: wrap;
+        @include flex-wrap(wrap);
     }
 
     &__li {
         width: 18.333333333333332em; //330
         min-height: 4.833333333333333em; //87
         @include grid(16px, 2, 1, 1fr, auto, auto); //16
-        align-items: center;
-        transition: 0.3s;
+        @include align-items(center);
+        @include transition(0.3s);
 
         &:hover div {
-            transform: scale(1.1);
+            @include transform(scale(1.1));
         }
     }
 
@@ -62,11 +62,11 @@
 
     &__div {
         @include flex(0.4444444444444444em, column, center, center); //8
-        transition: 0.3s;
+        @include transition(0.3s);
     }
 
     &__icon {
-        transition: 0.3s;
+        @include transition(0.3s);
         border-radius: 50%;
 
         &:hover {
@@ -80,8 +80,8 @@
         &__li {
             width: 100%;
             max-width: 18.333333333333332em; //330
-            display: flex;
-            flex-direction: column-reverse;
+            @include display(flex);
+            @include flex-direction(column-reverse);
         }
     }
 }

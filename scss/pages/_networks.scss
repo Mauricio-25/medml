@@ -64,16 +64,16 @@
 
     &__li {
         @extend %horizontalCard;
-        transition: 0.4s;
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
     }
 
     &__picture {
@@ -86,7 +86,7 @@
     &__img {
         
         opacity: 0.5;
-        transform: translateY(-50%);
+        @include transform(translateY(-50%));
 
         max-width: unset;
         object-fit: cover;
@@ -110,7 +110,7 @@
         }
 
         &--world {
-            transform: rotate(227deg);
+            @include transform(rotate(227deg));
             opacity: .03;
 
             left: -60%;
@@ -132,7 +132,7 @@
         }
 
         &__picture {
-            display: none;
+            @include display(none);
             position: absolute;
             z-index: 1;
         }
@@ -140,7 +140,7 @@
         &__img {
             width: 100%;
             height: auto;
-            transform: scaleX(-1);
+            @include transform(scaleX(-1));
             top: 0;
         }
 
@@ -164,12 +164,12 @@
         }
 
         &__div {
-            align-items: center;
+            @include align-items(center);
         }
 
         &__ul {
-            justify-content: center;
-            align-items: center;
+            @include justify-content(center);
+            @include align-items(center);
         }
 
     }

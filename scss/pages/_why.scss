@@ -22,24 +22,24 @@
 
     &__li {
         @extend %numberCard;
-        transition: 0.4s;
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
     }
 
     // ! QUERIES
 
     @include desktop() {
         &__ul {
-            justify-content: center;
-            flex-wrap: wrap;
+            @include justify-content(center);
+            @include flex-wrap(wrap);
         }
     }
 

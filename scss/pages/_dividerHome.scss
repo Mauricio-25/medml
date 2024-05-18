@@ -1,7 +1,7 @@
 
 .dividerHome {
     @extend %divider;
-    background: $gradient-primary;
+    @include background-linear-gradient();
 
     & .button {
         background-color: $white;

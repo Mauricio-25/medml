@@ -29,7 +29,7 @@
         color: $grayLight;
         text-align: center;
         font-weight: 600;
-        transition: 0.3s;
+        @include transition(0.3s);
     }
 
     & .div {
@@ -40,13 +40,13 @@
         font-size: 0.5555555555555556em; //10
         font-weight: 700;
         text-align: center;
-        transition: 0.3s;
+        @include transition(0.3s);
     }
 
     & .span {
         font-size: 0.4444444444444444em; //8
         text-align: center;
-        transition: 0.3s;
+        @include transition(0.3s);
     }
 
     & .splide {
@@ -60,33 +60,8 @@
 
         &__list {
             gap: 1.7777777777777777em; //32
-            align-items: center;
+            @include align-items(center);
             height: $height-card-hover-2; //200
-
-            /*
-            &:hover > :not(:hover) {
-                width: 14.61111111111111em !important; //263
-                min-height: 7.777777777777778em; //140
-                padding: 2.2222222222222223em 0.8888888888888888em; //40 16
-
-                & .p {
-                    font-size: 0.4444444444444444em; //8
-                    color: $grayLight;
-                    text-align: center;
-                    font-weight: 600;
-                }
-                & .h3 {
-                    font-size: 0.5555555555555556em; //10
-                    font-weight: 700;
-                    text-align: center;
-                }
-            
-                & .span {
-                    font-size: 0.4444444444444444em; //8
-                    text-align: center;
-                }
-            }
-            */
         }
 
         &__slide {
@@ -96,7 +71,7 @@
             border: 1px solid $white;
             border-radius: 1.3333333333333333em; //24
             @include flex(0.8888888888888888em, column, center, center); //16
-            transition: 0.3s;
+            @include transition(0.3s);
 
             &:nth-child(3n+2) {
                 width: $width-card-hover-2 !important; //460
@@ -143,7 +118,7 @@
     }
 
     & .splide__arrow {
-        display: none;
+        @include display(none);
     }
 
     & .splide__pagination  .is-active {

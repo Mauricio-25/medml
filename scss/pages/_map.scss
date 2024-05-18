@@ -3,7 +3,7 @@
     &__container {
         @extend %container;
         @include grid(1.7777777777777777em, 2, 1, 1.3fr, 1fr, auto); //32
-        align-items: center
+        @include align-items(center);
     }
 
     &__background {
@@ -28,10 +28,10 @@
 
     &__li {
         @include flex(0.8888888888888888em, row, center, center); //16
-        transition: 0.4s;
+        @include transition(0.4s);
 
         &:hover {
-            transform: scale(1.1) !important;
+            @include transform(scale(1.1) !important);
         }
     }
 
@@ -56,20 +56,20 @@
         }
 
         &__img {
-            display: none;
+            @include display(none);
             max-width: 450px; //450
         }
 
         &__div {
-            align-items: center;
+            @include align-items(center);
         }
 
         &__ul {
-            align-items: center;
+            @include align-items(center);
         }
 
         &__li {
-            flex-direction: column;
+            @include flex-direction(column);
         }
 
         &__p {

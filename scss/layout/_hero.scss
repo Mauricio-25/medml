@@ -1,6 +1,6 @@
 .hero {
 
-    transition: 1.5s !important;
+    @include transition(1.5s !important);
 
     &__container {
         @extend %container;
@@ -54,16 +54,16 @@
 
     @include tablet() {
         &__container {
-            flex-direction: column-reverse;
+            @include flex-direction(column-reverse);
             text-align: center;
         }
 
         &__col1 {
-            align-items: center;
+            @include align-items(center);
         }
 
         &__picture {
-            display: none;
+            @include display(none);
             max-width: 16.666666666666668em;  //300
             min-width: unset;
         }

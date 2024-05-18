@@ -55,7 +55,7 @@
         padding: 0.7142857142857143em; //10
         resize: none;
         border-radius: 0.5714285714285714em; //8
-        transition: 0.3s;
+        @include transition(0.3s);
         color: $grayLight;
 
         &:focus {
@@ -66,7 +66,7 @@
 
     &__button {
         @extend %button;
-        background: $gradient-primary;
+        @include background-linear-gradient();
     }
 
     // ! QUERIES
@@ -78,13 +78,13 @@
         }
 
         &__div {
-            align-items: center;
+            @include align-items(center);
             text-align: center;
         }
 
         &__circle {
-            display: none;
-            transform: rotate(90deg);
+            @include display(none);
+            @include transform(rotate(90deg));
         }
     }
 }

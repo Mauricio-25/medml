@@ -1,7 +1,7 @@
 
 .heroSection {
 
-    transition: 1.5s !important;
+    @include transition(1.5s !important);
 
     &__container {
         @extend %container;
@@ -27,19 +27,19 @@
 
     &__div {
         @include grid(32px, 2, 1, 1fr, 1fr, auto); //32
-        align-items: center;
+        @include align-items(center);
     }
 
     // ! QUERIES
 
     @include laptop() {
         &__div {
-            display: flex;
-            flex-direction: column;
+            @include display(flex);
+            @include flex-direction(column);
         }
 
         &__img {
-            display: none;
+            @include display(none);
             max-width: 30.555555555555557em; //550
         }
 
