@@ -340,3 +340,13 @@ function cerrarPopUpContact() {
         mesContact.style.display = "none";
     }, 300)
 }
+
+
+// ! abrir y cerrar menu
+
+const btnBurger = document.querySelector(".header__burger");
+const menu = document.querySelector(".menu");
+
+btnBurger.addEventListener("click", ()=>{
+    menu.classList.toggle("menu--active")
+})

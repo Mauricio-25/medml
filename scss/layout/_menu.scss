@@ -1,0 +1,38 @@
+
+.menu {
+    @include display(none);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    padding: 0.8888888888888888em size($padding-x-mobile, $padding-x); //16
+    padding-top: 5em; //90;
+    border-bottom: 1px solid #383838;
+    transform: translateY(-100%);
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+
+    &--active {
+        transform: translateY(0);
+    }
+
+    &__ul {
+        width: 100%;
+        @include flex(30px, column, center, center);
+        padding: 0.8333333333333334em; //15
+    }
+
+    &__a {
+        font-weight: 700;
+        @include transition(0.3s);
+
+        &:active {
+            color: $primary;
+        }
+    }
+
+    @include tablet() {
+        @include display(flex);
+    }
+}

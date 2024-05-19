@@ -104,6 +104,15 @@ body {
         width: 1.3333333333333333em; //24
     }
 
+    &__burger {
+        @include display(none);
+        cursor: pointer;
+    }
+
+    &__group {
+        @include flex(1.1111111111111112em, row, center, center); //20
+    }
+
     @include tablet() {
         
         &__nav, &__block {
@@ -117,8 +126,16 @@ body {
         &__collapse {
 
             &--open {
-                height: 84px; //84
+                height: 4.666666666666667em; //84
             }
+        }
+
+        &__burger {
+            @include display(block);
+        }
+
+        &__menu {
+            width: 1.6666666666666667em; //30
         }
     }
 }
