@@ -1628,11 +1628,28 @@ body {
     height: 4.6666666667em;
   }
   .header__burger {
-    -webkit-display: block;
-    -moz-display: block;
-    -o-display: block;
-    -ms-display: block;
-    display: block;
+    width: 2.3888888889em;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -o-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    gap: 0;
   }
   .header__menu {
     width: 1.6666666667em;

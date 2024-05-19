@@ -131,7 +131,8 @@ body {
         }
 
         &__burger {
-            @include display(block);
+            width: 2.388888888888889em; //43
+            @include flex(0, row, center, center);
         }
 
         &__menu {
